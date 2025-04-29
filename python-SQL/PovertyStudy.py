@@ -1,6 +1,5 @@
 import psycopg2
 import pandas as pd
-import io
 
 # Conecta com o banco de dados
 conn = psycopg2.connect(
@@ -237,11 +236,14 @@ except Exception as e:
     print(f"Erro: {e}")    
 
 # Lê o CSV e separa os dados
-df = pd.read_csv('processing//poverty_inequality/Poverty_Inequality_filtrado.csv')
+df_poverty = pd.read_csv('processing/poverty_inequality/Poverty_Inequality_filtered.csv')
+df_region_indicators = pd.read_csv('processing/global_indicators/Global_Indicators_regioes_filtered.csv')
+df_indicators = pd.read_csv('processing/global_indicators/Global_Indicators_filtered.csv')
 
 # Divide o DataFrame conforme alguma condição ou seleção de colunas
-df_country = df[['region_code', 'country_name', 'country_code']]  # Para a tabela 'Country'
-df_survey = df[['country_code', 'welfare_type', 'survey_acronym', 'survey_comparability', 
+df_region = df_region_indicators['Country Name', 'Country Code']
+df_country = df_poverty[['region_code', 'country_name', 'country_code']]  # Para a tabela 'Country'
+df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'survey_comparability', 
                 'comparable_spell', 'poverty_line', 'headcount', 'poverty_gap', 
                 'poverty_severity', 'gini', 'reporting_pop', 'reporting_pce', 
                 'distribution_type', 'spl', 'survey_year']]  # Para a tabela 'Survey'
@@ -249,28 +251,41 @@ df_survey = df[['country_code', 'welfare_type', 'survey_acronym', 'survey_compar
 
 cursor = conn.cursor()
 
-# Passo 1: Carregar dados na tabela 'Country'
+# Passo 1: Carregar dados na tabela 'Region'
 # Verificar duplicidade e só inserir valores únicos
+df_region.drop_duplicates(subset=['region_code'], inplace=True)  # Remover duplicatas por 'region_code'
 
-df_country.drop_duplicates(subset=['country_code'], inplace=True)  # Remover duplicatas por 'country_code'
-
-with open('Poverty_Inequality_filtrado_country.csv', 'w') as f:
+with open('Poverty_Inequality_filtered_region.csv', 'w') as f:
     df_country.to_csv(f, index=False)
 
-with open('Poverty_Inequality_filtrado_country.csv', 'r') as f: # Pode dar erro com duplicatas
+with open('Poverty_Inequality_filtered_region.csv', 'r') as f: # Pode dar erro com duplicatas
     cursor.copy_expert("""
-        COPY public."Country" (region_code, country_name, country_code)
+        COPY public."Region" (region_code, region_name)
         FROM STDIN
         WITH (FORMAT csv, HEADER true, DELIMITER ',');
     """, f)
 
-# Passo 2: Carregar dados na tabela 'Survey'
+# Passo 2: Carregar dados na tabela 'Country'
+# Verificar duplicidade e só inserir valores únicos
+df_country.drop_duplicates(subset=['country_code'], inplace=True)  # Remover duplicatas por 'country_code'
+
+with open('Poverty_Inequality_filtered_country.csv', 'w') as f1:
+    df_country.to_csv(f1, index=False)
+
+with open('Poverty_Inequality_filtered_country.csv', 'r') as f1: # Pode dar erro com duplicatas
+    cursor.copy_expert("""
+        COPY public."Country" (region_code, country_name, country_code)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',');
+    """, f1)
+
+# Passo 3: Carregar dados na tabela 'Survey'
 df_survey.drop_duplicates(subset=['country_code'], inplace=True)  # Garantir que 'country_code' esteja único na tabela 'Survey'
 
-with open('Poverty_Inequality_filtrado_survey.csv', 'w') as f2:
+with open('Poverty_Inequality_filtered_survey.csv', 'w') as f2:
     df_survey.to_csv(f2, index=False)
 
-with open('Poverty_Inequality_filtrado_survey.csv', 'r') as f2:
+with open('Poverty_Inequality_filtered_survey.csv', 'r') as f2:
     cursor.copy_expert("""
         COPY public."Survey" (country_code, welfare_type, survey_acronym, survey_comparability, 
                                comparable_spell, poverty_line, headcount, poverty_gap, poverty_severity, 
