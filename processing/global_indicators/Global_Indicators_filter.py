@@ -30,13 +30,4 @@ df_filtrado_transformado.rename(columns={'Country Name': 'country_name', 'Countr
 # Salvar o resultado em Global_Indicators_filtered.csv
 df_filtrado_transformado.to_csv("processing/global_indicators/Global_Indicators_filtered.csv", index=False, quoting=csv.QUOTE_ALL)
 
-print("Arquivo filtrado com sucesso!")
-
-# Separar as regiões e salvar em outro arquivo
-# As regiões acabam na linha 1618
-df_filtrado_transformado = df_filtrado_transformado.iloc[:1617]
-
-# Renomear a coluna
-df_filtrado_transformado.rename(columns={'country_name': 'region_name', 'country_code': 'region_code'}, inplace=True)
-
-df_filtrado_transformado.to_csv("processing/global_indicators/Global_Indicators_regions_filtered.csv", index=False)
+print("Arquivos filtrados com sucesso!")
