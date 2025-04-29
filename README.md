@@ -5,19 +5,25 @@
 Este projeto integra dados de dois conjuntos de dados (datasets) relacionados a:
 - [Pobreza e desigualdade global](https://pip.worldbank.org/poverty-calculator)
 - [Indicadores de educação, trabalho, demografia, saúde e economia dos países](https://datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators)
+
 O banco de dados foi desenvolvido para armazenar, organizar e permitir consultas significativas sobre a situação social e econômica dos países, com foco em temas diretamente conectados aos **Objetivos de Desenvolvimento Sustentável (ODS)** da ONU.
+
 ---
+
 ## Objetivos de Desenvolvimento Sustentável Relacionados
 Os dados e consultas abordam temas conectados aos seguintes ODS:
 - ODS 1: Erradicação da Pobreza
 - ODS 3: Saúde e Bem-Estar
 - ODS 4: Educação de Qualidade
 - ODS 10: Redução das Desigualdades  
+
 ---
+
 ### 1. Modelo Conceitual
 
 - Desenvolvemos o diagrama entidade-relacionamento (DER) representando as principais entidades (como País, Indicador, Pobreza, Educação, Saúde, etc.) e seus relacionamentos.
 - Para isso utilizamos os seguintes dados do dataset:
+
 #### Global Indicators
 
 | INDICATOR                                                                   | INDICATOR CODE    | STRONG ENTITY / WEAK ENTITY |      ATTRIBUTE NAME      |
@@ -92,23 +98,31 @@ Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para se
 | Decile position ("Decile 1" to "Decile 10")                        | name              |
 | % of population in the given decile.                               | value             |
 
+
+![Conceptual_model](models/Conceptual_model.png)
+
 ### 2. Modelo Relacional
 
 A transformação do modelo conceitual para o modelo relacional, especificando tabelas, atributos, chaves primárias e estrangeiras.
 
+![Relational_model](models/Relational_model.png)
+
 ### 3. Modelo Físico
+
 O script de criação (DDL) do banco de dados foi escrito em SQL padrão e inclui:
 - Criação de tabelas
 - Definição de chaves primárias e estrangeiras
 - Restrições de integridade
 
 ### 4. Consultas SQL
+
 Elaboramos pelo menos 5 consultas SQL não triviais, que:
 - Integram dados de mais de uma tabela
 - Fazem uso de agrupamentos (`GROUP BY`), ordenações (`ORDER BY`) e operações de junção (`JOIN`)
   
 
 ### 5. Implementação em Python
+
 A implementação foi feita utilizando a biblioteca `sqlite3` para a conexão com o banco de dados e manipulação das operações.
 
 ## Autores
