@@ -22,9 +22,10 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 ### 1. Modelo Conceitual
 
 - Desenvolvemos o diagrama entidade-relacionamento (DER) representando as principais entidades (como País, Indicador, Pobreza, Educação, Saúde, etc.) e seus relacionamentos.
-- Para isso utilizamos os seguintes dados do dataset:
+- Para isso filtramos os datasets escolhidos pelo código identificador dos indicadores, separando cada um deles em entidades. Além disso atribuimos nomes melhores para cada indicador, a fim de facilitar a consulta SQL.
+- Abaixo temos os indicadores escolhidos de cada dataset separado em suas entidades. Vale lembrar que a tabela abaixo tem apenas a parte dos indicadores, sendo que dada informação dessa possui seu país/região e ano de origem da pesquisa.
 
-#### Global Indicators
+#### [Global Indicators](https://github.com/FernandoRST7/Postgres-Database-Project-PovertyStudy/blob/main/processing/global_indicators/Global_Indicators_filtered.csv)
 
 | INDICATOR                                                                   | INDICATOR CODE    | STRONG ENTITY / WEAK ENTITY |      ATTRIBUTE NAME      |
 | --------------------------------------------------------------------------- | ----------------- | --------------------------- | :----------------------: |
@@ -73,7 +74,7 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 | Tax revenue (% of GDP)                                                      | GC.TAX.TOTL.GD.ZS | Economy                     |       tax_revenue        |
 Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para separar dados em tabelas menores para reduzir redundância e dependências indesejadas. Portanto, nossa estruturação utiliza a **1FN (Primeira Forma Normal)** e **3FN (Terceira Forma Normal)**.
 
-#### Poverty_Inequality
+#### [Poverty_Inequality](https://github.com/FernandoRST7/Postgres-Database-Project-PovertyStudy/blob/main/processing/poverty_inequality/Poverty_Inequality_filtered.csv)
 
 | Description                                                        | Field             |
 | ------------------------------------------------------------------ | ----------------- |
