@@ -1,0 +1,1618 @@
+region_name,region_code,Indicator Name,Indicator Code,Year,Value
+Africa Eastern and Southern,AFE,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.7110051011101
+Africa Eastern and Southern,AFE,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Africa Eastern and Southern,AFE,"Children out of school, primary",SE.PRM.UNER,1960,
+Africa Eastern and Southern,AFE,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Africa Eastern and Southern,AFE,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.965803276721644
+Africa Eastern and Southern,AFE,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Africa Eastern and Southern,AFE,GDP (current US$),NY.GDP.MKTP.CD,1960,24210632546.40918
+Africa Eastern and Southern,AFE,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Africa Eastern and Southern,AFE,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.9732889997952032
+Africa Eastern and Southern,AFE,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Africa Eastern and Southern,AFE,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Africa Eastern and Southern,AFE,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Africa Eastern and Southern,AFE,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,45.99768570256301
+Africa Eastern and Southern,AFE,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.44849608670432
+Africa Eastern and Southern,AFE,Net migration,SM.POP.NETM,1960,-102704.0
+Africa Eastern and Southern,AFE,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Africa Eastern and Southern,AFE,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Africa Eastern and Southern,AFE,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,28506657.0
+Africa Eastern and Southern,AFE,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,28714937.0
+Africa Eastern and Southern,AFE,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,34993426.0
+Africa Eastern and Southern,AFE,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,33973181.0
+Africa Eastern and Southern,AFE,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,2162479.0
+Africa Eastern and Southern,AFE,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Africa Eastern and Southern,AFE,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Africa Eastern and Southern,AFE,Rural population,SP.RUR.TOTL,1960,111111891.0
+Africa Eastern and Southern,AFE,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Africa Eastern and Southern,AFE,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Africa Eastern and Southern,AFE,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Africa Eastern and Southern,AFE,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Africa Eastern and Southern,AFE,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Africa Eastern and Southern,AFE,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Africa Eastern and Southern,AFE,Urban population,SP.URB.TOTL,1960,18960189.0
+Africa Eastern and Southern,AFE,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Africa Western and Central,AFW,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.52006511440919
+Africa Western and Central,AFW,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Africa Western and Central,AFW,"Children out of school, primary",SE.PRM.UNER,1960,
+Africa Western and Central,AFW,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Africa Western and Central,AFW,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,26.442826916911837
+Africa Western and Central,AFW,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Africa Western and Central,AFW,GDP (current US$),NY.GDP.MKTP.CD,1960,11904954209.7913
+Africa Western and Central,AFW,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Africa Western and Central,AFW,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.7865521564019815
+Africa Western and Central,AFW,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Africa Western and Central,AFW,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Africa Western and Central,AFW,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Africa Western and Central,AFW,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,39.817585911532376
+Africa Western and Central,AFW,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,35.92567334429005
+Africa Western and Central,AFW,Net migration,SM.POP.NETM,1960,-759.0
+Africa Western and Central,AFW,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Africa Western and Central,AFW,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Africa Western and Central,AFW,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,20310607.0
+Africa Western and Central,AFW,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,20212956.0
+Africa Western and Central,AFW,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,27096257.0
+Africa Western and Central,AFW,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,26773691.0
+Africa Western and Central,AFW,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,1768547.0
+Africa Western and Central,AFW,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Africa Western and Central,AFW,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Africa Western and Central,AFW,Rural population,SP.RUR.TOTL,1960,83269407.0
+Africa Western and Central,AFW,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Africa Western and Central,AFW,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Africa Western and Central,AFW,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Africa Western and Central,AFW,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Africa Western and Central,AFW,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Africa Western and Central,AFW,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Africa Western and Central,AFW,Urban population,SP.URB.TOTL,1960,14361518.0
+Africa Western and Central,AFW,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Arab World,ARB,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.82721112390114
+Arab World,ARB,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Arab World,ARB,"Children out of school, primary",SE.PRM.UNER,1960,
+Arab World,ARB,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Arab World,ARB,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,21.35047832514735
+Arab World,ARB,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Arab World,ARB,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Arab World,ARB,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Arab World,ARB,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.9456666861060796
+Arab World,ARB,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Arab World,ARB,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Arab World,ARB,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Arab World,ARB,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,46.917488042706886
+Arab World,ARB,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.85012716796957
+Arab World,ARB,Net migration,SM.POP.NETM,1960,-78553.0
+Arab World,ARB,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Arab World,ARB,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Arab World,ARB,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,19490694.0
+Arab World,ARB,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,20257406.0
+Arab World,ARB,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,24323419.0
+Arab World,ARB,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,24284541.0
+Arab World,ARB,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,1739765.0
+Arab World,ARB,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Arab World,ARB,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Arab World,ARB,Rural population,SP.RUR.TOTL,1960,63153544.0
+Arab World,ARB,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Arab World,ARB,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Arab World,ARB,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Arab World,ARB,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Arab World,ARB,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Arab World,ARB,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Arab World,ARB,Urban population,SP.URB.TOTL,1960,28387309.0
+Arab World,ARB,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Caribbean small states,CSS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,42.3711403170879
+Caribbean small states,CSS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Caribbean small states,CSS,"Children out of school, primary",SE.PRM.UNER,1960,
+Caribbean small states,CSS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Caribbean small states,CSS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,11.517444022866748
+Caribbean small states,CSS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Caribbean small states,CSS,GDP (current US$),NY.GDP.MKTP.CD,1960,641146358.5882314
+Caribbean small states,CSS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Caribbean small states,CSS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,5.634960807466383
+Caribbean small states,CSS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Caribbean small states,CSS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Caribbean small states,CSS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Caribbean small states,CSS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,61.31634707306567
+Caribbean small states,CSS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,57.05297471385316
+Caribbean small states,CSS,Net migration,SM.POP.NETM,1960,-13827.0
+Caribbean small states,CSS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Caribbean small states,CSS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Caribbean small states,CSS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,378142.0
+Caribbean small states,CSS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,384369.0
+Caribbean small states,CSS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,454352.0
+Caribbean small states,CSS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,426498.0
+Caribbean small states,CSS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,42709.0
+Caribbean small states,CSS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Caribbean small states,CSS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Caribbean small states,CSS,Rural population,SP.RUR.TOTL,1960,1089626.0
+Caribbean small states,CSS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Caribbean small states,CSS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Caribbean small states,CSS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Caribbean small states,CSS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Caribbean small states,CSS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Caribbean small states,CSS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Caribbean small states,CSS,Urban population,SP.URB.TOTL,1960,623779.0
+Caribbean small states,CSS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Central Europe and the Baltics,CEB,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,19.11743370839101
+Central Europe and the Baltics,CEB,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Central Europe and the Baltics,CEB,"Children out of school, primary",SE.PRM.UNER,1960,
+Central Europe and the Baltics,CEB,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Central Europe and the Baltics,CEB,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,8.632179424896002
+Central Europe and the Baltics,CEB,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Central Europe and the Baltics,CEB,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Central Europe and the Baltics,CEB,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Central Europe and the Baltics,CEB,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Central Europe and the Baltics,CEB,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Central Europe and the Baltics,CEB,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Central Europe and the Baltics,CEB,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Central Europe and the Baltics,CEB,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,70.44517061378548
+Central Europe and the Baltics,CEB,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,65.57607227518915
+Central Europe and the Baltics,CEB,Net migration,SM.POP.NETM,1960,-58018.0
+Central Europe and the Baltics,CEB,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Central Europe and the Baltics,CEB,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Central Europe and the Baltics,CEB,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,13000766.0
+Central Europe and the Baltics,CEB,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,13445897.0
+Central Europe and the Baltics,CEB,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,30279529.0
+Central Europe and the Baltics,CEB,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,28036684.0
+Central Europe and the Baltics,CEB,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,4006096.0
+Central Europe and the Baltics,CEB,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Central Europe and the Baltics,CEB,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Central Europe and the Baltics,CEB,Rural population,SP.RUR.TOTL,1960,50720764.0
+Central Europe and the Baltics,CEB,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Central Europe and the Baltics,CEB,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Central Europe and the Baltics,CEB,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Central Europe and the Baltics,CEB,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Central Europe and the Baltics,CEB,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Central Europe and the Baltics,CEB,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Central Europe and the Baltics,CEB,Urban population,SP.URB.TOTL,1960,40681000.0
+Central Europe and the Baltics,CEB,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Early-demographic dividend,EAR,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,44.36209378696101
+Early-demographic dividend,EAR,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Early-demographic dividend,EAR,"Children out of school, primary",SE.PRM.UNER,1960,
+Early-demographic dividend,EAR,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Early-demographic dividend,EAR,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,18.80935719690068
+Early-demographic dividend,EAR,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Early-demographic dividend,EAR,GDP (current US$),NY.GDP.MKTP.CD,1960,151408515299.42563
+Early-demographic dividend,EAR,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Early-demographic dividend,EAR,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.9298457507546876
+Early-demographic dividend,EAR,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Early-demographic dividend,EAR,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Early-demographic dividend,EAR,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Early-demographic dividend,EAR,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,47.39867088581772
+Early-demographic dividend,EAR,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,46.516747129183855
+Early-demographic dividend,EAR,Net migration,SM.POP.NETM,1960,46031.0
+Early-demographic dividend,EAR,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Early-demographic dividend,EAR,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Early-demographic dividend,EAR,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,196576555.0
+Early-demographic dividend,EAR,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,205556709.0
+Early-demographic dividend,EAR,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,261418797.0
+Early-demographic dividend,EAR,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,274075353.0
+Early-demographic dividend,EAR,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,16116714.0
+Early-demographic dividend,EAR,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Early-demographic dividend,EAR,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Early-demographic dividend,EAR,Rural population,SP.RUR.TOTL,1960,747237608.0
+Early-demographic dividend,EAR,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Early-demographic dividend,EAR,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Early-demographic dividend,EAR,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Early-demographic dividend,EAR,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Early-demographic dividend,EAR,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Early-demographic dividend,EAR,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Early-demographic dividend,EAR,Urban population,SP.URB.TOTL,1960,221671748.0
+Early-demographic dividend,EAR,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+East Asia & Pacific,EAS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,26.30847611114888
+East Asia & Pacific,EAS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+East Asia & Pacific,EAS,"Children out of school, primary",SE.PRM.UNER,1960,
+East Asia & Pacific,EAS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+East Asia & Pacific,EAS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.880627744224785
+East Asia & Pacific,EAS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+East Asia & Pacific,EAS,GDP (current US$),NY.GDP.MKTP.CD,1960,157146103914.43286
+East Asia & Pacific,EAS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+East Asia & Pacific,EAS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+East Asia & Pacific,EAS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+East Asia & Pacific,EAS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+East Asia & Pacific,EAS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+East Asia & Pacific,EAS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.60262988023937
+East Asia & Pacific,EAS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.98642896304564
+East Asia & Pacific,EAS,Net migration,SM.POP.NETM,1960,-40790.0
+East Asia & Pacific,EAS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+East Asia & Pacific,EAS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+East Asia & Pacific,EAS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,202028551.0
+East Asia & Pacific,EAS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,211731427.0
+East Asia & Pacific,EAS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,289871860.0
+East Asia & Pacific,EAS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,298338779.0
+East Asia & Pacific,EAS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,23463216.0
+East Asia & Pacific,EAS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+East Asia & Pacific,EAS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+East Asia & Pacific,EAS,Rural population,SP.RUR.TOTL,1960,806878185.0
+East Asia & Pacific,EAS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+East Asia & Pacific,EAS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+East Asia & Pacific,EAS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+East Asia & Pacific,EAS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+East Asia & Pacific,EAS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+East Asia & Pacific,EAS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+East Asia & Pacific,EAS,Urban population,SP.URB.TOTL,1960,235960266.0
+East Asia & Pacific,EAS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,26.6406020079065
+East Asia & Pacific (excluding high income),EAP,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Children out of school, primary",SE.PRM.UNER,1960,
+East Asia & Pacific (excluding high income),EAP,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.90553682780701
+East Asia & Pacific (excluding high income),EAP,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,GDP (current US$),NY.GDP.MKTP.CD,1960,80752362533.5747
+East Asia & Pacific (excluding high income),EAP,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+East Asia & Pacific (excluding high income),EAP,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Labor force, total",SL.TLF.TOTL.IN,1960,
+East Asia & Pacific (excluding high income),EAP,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,39.51524870104824
+East Asia & Pacific (excluding high income),EAP,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,36.34980301303791
+East Asia & Pacific (excluding high income),EAP,Net migration,SM.POP.NETM,1960,-102382.0
+East Asia & Pacific (excluding high income),EAP,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,177956882.0
+East Asia & Pacific (excluding high income),EAP,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,186743564.0
+East Asia & Pacific (excluding high income),EAP,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,244076598.0
+East Asia & Pacific (excluding high income),EAP,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,253928306.0
+East Asia & Pacific (excluding high income),EAP,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,19065277.0
+East Asia & Pacific (excluding high income),EAP,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+East Asia & Pacific (excluding high income),EAP,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,Rural population,SP.RUR.TOTL,1960,744085644.0
+East Asia & Pacific (excluding high income),EAP,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+East Asia & Pacific (excluding high income),EAP,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+East Asia & Pacific (excluding high income),EAP,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+East Asia & Pacific (excluding high income),EAP,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+East Asia & Pacific (excluding high income),EAP,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+East Asia & Pacific (excluding high income),EAP,Urban population,SP.URB.TOTL,1960,151875891.0
+East Asia & Pacific (excluding high income),EAP,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,26.5320815253987
+East Asia & Pacific (IDA & IBRD countries),TEA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Children out of school, primary",SE.PRM.UNER,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.06121146866467
+East Asia & Pacific (IDA & IBRD countries),TEA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,GDP (current US$),NY.GDP.MKTP.CD,1960,80669679176.82407
+East Asia & Pacific (IDA & IBRD countries),TEA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,39.24848674356496
+East Asia & Pacific (IDA & IBRD countries),TEA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,36.14619926753231
+East Asia & Pacific (IDA & IBRD countries),TEA,Net migration,SM.POP.NETM,1960,-102376.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,175773258.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,184539692.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,240092801.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,250974687.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,18818227.0
+East Asia & Pacific (IDA & IBRD countries),TEA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,Rural population,SP.RUR.TOTL,1960,737078760.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+East Asia & Pacific (IDA & IBRD countries),TEA,Urban population,SP.URB.TOTL,1960,147173757.0
+East Asia & Pacific (IDA & IBRD countries),TEA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Euro area,EMU,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,18.830110715617387
+Euro area,EMU,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Euro area,EMU,"Children out of school, primary",SE.PRM.UNER,1960,
+Euro area,EMU,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Euro area,EMU,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,10.486689192226052
+Euro area,EMU,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Euro area,EMU,GDP (current US$),NY.GDP.MKTP.CD,1960,251413246919.6073
+Euro area,EMU,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Euro area,EMU,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Euro area,EMU,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Euro area,EMU,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Euro area,EMU,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Euro area,EMU,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,72.05727716866649
+Euro area,EMU,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,66.60999581345139
+Euro area,EMU,Net migration,SM.POP.NETM,1960,-103429.0
+Euro area,EMU,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Euro area,EMU,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Euro area,EMU,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,33225111.0
+Euro area,EMU,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,34688510.0
+Euro area,EMU,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,91145698.0
+Euro area,EMU,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,83721959.0
+Euro area,EMU,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,16340753.0
+Euro area,EMU,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Euro area,EMU,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Euro area,EMU,Rural population,SP.RUR.TOTL,1960,103740137.0
+Euro area,EMU,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Euro area,EMU,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Euro area,EMU,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Euro area,EMU,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Euro area,EMU,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Euro area,EMU,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Euro area,EMU,Urban population,SP.URB.TOTL,1960,166408833.0
+Euro area,EMU,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Europe & Central Asia,ECS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,22.221090504900683
+Europe & Central Asia,ECS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Europe & Central Asia,ECS,"Children out of school, primary",SE.PRM.UNER,1960,
+Europe & Central Asia,ECS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Europe & Central Asia,ECS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,10.127052381716542
+Europe & Central Asia,ECS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Europe & Central Asia,ECS,GDP (current US$),NY.GDP.MKTP.CD,1960,426424801995.06
+Europe & Central Asia,ECS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Europe & Central Asia,ECS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Europe & Central Asia,ECS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Europe & Central Asia,ECS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Europe & Central Asia,ECS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Europe & Central Asia,ECS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,70.52537857872512
+Europe & Central Asia,ECS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,64.42139546441125
+Europe & Central Asia,ECS,Net migration,SM.POP.NETM,1960,-148155.0
+Europe & Central Asia,ECS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Europe & Central Asia,ECS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Europe & Central Asia,ECS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,91946933.0
+Europe & Central Asia,ECS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,95803568.0
+Europe & Central Asia,ECS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,225060512.0
+Europe & Central Asia,ECS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,199100597.0
+Europe & Central Asia,ECS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,34325208.0
+Europe & Central Asia,ECS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Europe & Central Asia,ECS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Europe & Central Asia,ECS,Rural population,SP.RUR.TOTL,1960,296417298.0
+Europe & Central Asia,ECS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Europe & Central Asia,ECS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Europe & Central Asia,ECS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Europe & Central Asia,ECS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Europe & Central Asia,ECS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Europe & Central Asia,ECS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Europe & Central Asia,ECS,Urban population,SP.URB.TOTL,1960,370485667.0
+Europe & Central Asia,ECS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,32.6022592049538
+Europe & Central Asia (excluding high income),ECA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Children out of school, primary",SE.PRM.UNER,1960,
+Europe & Central Asia (excluding high income),ECA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,12.24862242684796
+Europe & Central Asia (excluding high income),ECA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Europe & Central Asia (excluding high income),ECA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Europe & Central Asia (excluding high income),ECA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Europe & Central Asia (excluding high income),ECA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,64.18675856410633
+Europe & Central Asia (excluding high income),ECA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,57.3651087297065
+Europe & Central Asia (excluding high income),ECA,Net migration,SM.POP.NETM,1960,207619.0
+Europe & Central Asia (excluding high income),ECA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,21473279.0
+Europe & Central Asia (excluding high income),ECA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,22369347.0
+Europe & Central Asia (excluding high income),ECA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,41710397.0
+Europe & Central Asia (excluding high income),ECA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,35647506.0
+Europe & Central Asia (excluding high income),ECA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,4684496.0
+Europe & Central Asia (excluding high income),ECA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Europe & Central Asia (excluding high income),ECA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,Rural population,SP.RUR.TOTL,1960,78354391.0
+Europe & Central Asia (excluding high income),ECA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Europe & Central Asia (excluding high income),ECA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Europe & Central Asia (excluding high income),ECA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Europe & Central Asia (excluding high income),ECA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Europe & Central Asia (excluding high income),ECA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Europe & Central Asia (excluding high income),ECA,Urban population,SP.URB.TOTL,1960,49471214.0
+Europe & Central Asia (excluding high income),ECA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,26.882970560069914
+Europe & Central Asia (IDA & IBRD countries),TEC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Children out of school, primary",SE.PRM.UNER,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,9.614896443029624
+Europe & Central Asia (IDA & IBRD countries),TEC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,68.23998623474162
+Europe & Central Asia (IDA & IBRD countries),TEC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,61.18450027321451
+Europe & Central Asia (IDA & IBRD countries),TEC,Net migration,SM.POP.NETM,1960,-111859.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,48409504.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,50257332.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,104483784.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,86961902.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,12050509.0
+Europe & Central Asia (IDA & IBRD countries),TEC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,Rural population,SP.RUR.TOTL,1960,169223432.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Europe & Central Asia (IDA & IBRD countries),TEC,Urban population,SP.URB.TOTL,1960,138551083.0
+Europe & Central Asia (IDA & IBRD countries),TEC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+European Union,EUU,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,18.736762952905124
+European Union,EUU,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+European Union,EUU,"Children out of school, primary",SE.PRM.UNER,1960,
+European Union,EUU,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+European Union,EUU,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,10.053837626756785
+European Union,EUU,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+European Union,EUU,GDP (current US$),NY.GDP.MKTP.CD,1960,284932124120.84424
+European Union,EUU,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+European Union,EUU,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+European Union,EUU,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+European Union,EUU,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+European Union,EUU,"Labor force, total",SL.TLF.TOTL.IN,1960,
+European Union,EUU,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,71.74878968400121
+European Union,EUU,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,66.52188450027586
+European Union,EUU,Net migration,SM.POP.NETM,1960,-167571.0
+European Union,EUU,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+European Union,EUU,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+European Union,EUU,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,45460802.0
+European Union,EUU,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,47397925.0
+European Union,EUU,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,119849442.0
+European Union,EUU,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,110906935.0
+European Union,EUU,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,20282528.0
+European Union,EUU,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+European Union,EUU,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+European Union,EUU,Rural population,SP.RUR.TOTL,1960,147792378.0
+European Union,EUU,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+European Union,EUU,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+European Union,EUU,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+European Union,EUU,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+European Union,EUU,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+European Union,EUU,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+European Union,EUU,Urban population,SP.URB.TOTL,1960,209918553.0
+European Union,EUU,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Fragile and conflict affected situations,FCS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,42.041429410795736
+Fragile and conflict affected situations,FCS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Fragile and conflict affected situations,FCS,"Children out of school, primary",SE.PRM.UNER,1960,
+Fragile and conflict affected situations,FCS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Fragile and conflict affected situations,FCS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.882895269700693
+Fragile and conflict affected situations,FCS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Fragile and conflict affected situations,FCS,GDP (current US$),NY.GDP.MKTP.CD,1960,34157915798.170727
+Fragile and conflict affected situations,FCS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Fragile and conflict affected situations,FCS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.2291376232351352
+Fragile and conflict affected situations,FCS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Fragile and conflict affected situations,FCS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Fragile and conflict affected situations,FCS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Fragile and conflict affected situations,FCS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,48.69754099104314
+Fragile and conflict affected situations,FCS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,43.53736018207902
+Fragile and conflict affected situations,FCS,Net migration,SM.POP.NETM,1960,-18696.0
+Fragile and conflict affected situations,FCS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Fragile and conflict affected situations,FCS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Fragile and conflict affected situations,FCS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,48086438.0
+Fragile and conflict affected situations,FCS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,48567724.0
+Fragile and conflict affected situations,FCS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,72056618.0
+Fragile and conflict affected situations,FCS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,67144064.0
+Fragile and conflict affected situations,FCS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,5692498.0
+Fragile and conflict affected situations,FCS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Fragile and conflict affected situations,FCS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Fragile and conflict affected situations,FCS,Rural population,SP.RUR.TOTL,1960,190091961.0
+Fragile and conflict affected situations,FCS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Fragile and conflict affected situations,FCS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Fragile and conflict affected situations,FCS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Fragile and conflict affected situations,FCS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Fragile and conflict affected situations,FCS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Fragile and conflict affected situations,FCS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Fragile and conflict affected situations,FCS,Urban population,SP.URB.TOTL,1960,54369670.0
+Fragile and conflict affected situations,FCS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,48.31700749073665
+Heavily indebted poor countries (HIPC),HPC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Children out of school, primary",SE.PRM.UNER,1960,
+Heavily indebted poor countries (HIPC),HPC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.823290308414347
+Heavily indebted poor countries (HIPC),HPC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,GDP (current US$),NY.GDP.MKTP.CD,1960,21764253547.173435
+Heavily indebted poor countries (HIPC),HPC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.520205355512835
+Heavily indebted poor countries (HIPC),HPC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Heavily indebted poor countries (HIPC),HPC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Heavily indebted poor countries (HIPC),HPC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,42.648948462960576
+Heavily indebted poor countries (HIPC),HPC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.08866942040916
+Heavily indebted poor countries (HIPC),HPC,Net migration,SM.POP.NETM,1960,-98188.0
+Heavily indebted poor countries (HIPC),HPC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,35267394.0
+Heavily indebted poor countries (HIPC),HPC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,35356128.0
+Heavily indebted poor countries (HIPC),HPC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,44617101.0
+Heavily indebted poor countries (HIPC),HPC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,43447127.0
+Heavily indebted poor countries (HIPC),HPC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,2733522.0
+Heavily indebted poor countries (HIPC),HPC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Heavily indebted poor countries (HIPC),HPC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,Rural population,SP.RUR.TOTL,1960,143326969.0
+Heavily indebted poor countries (HIPC),HPC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Heavily indebted poor countries (HIPC),HPC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Heavily indebted poor countries (HIPC),HPC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Heavily indebted poor countries (HIPC),HPC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Heavily indebted poor countries (HIPC),HPC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Heavily indebted poor countries (HIPC),HPC,Urban population,SP.URB.TOTL,1960,20323558.0
+Heavily indebted poor countries (HIPC),HPC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+High income,HIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,21.79411741616675
+High income,HIC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+High income,HIC,"Children out of school, primary",SE.PRM.UNER,1960,
+High income,HIC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+High income,HIC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,9.423720866003771
+High income,HIC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+High income,HIC,GDP (current US$),NY.GDP.MKTP.CD,1960,1092551546744.3442
+High income,HIC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+High income,HIC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+High income,HIC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+High income,HIC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+High income,HIC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+High income,HIC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,71.39576899573328
+High income,HIC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,65.46325434081363
+High income,HIC,Net migration,SM.POP.NETM,1960,155693.0
+High income,HIC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+High income,HIC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+High income,HIC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,129810685.0
+High income,HIC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,134451220.0
+High income,HIC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,295796273.0
+High income,HIC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,272637714.0
+High income,HIC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,44065572.0
+High income,HIC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+High income,HIC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+High income,HIC,Rural population,SP.RUR.TOTL,1960,349823348.0
+High income,HIC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+High income,HIC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+High income,HIC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+High income,HIC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+High income,HIC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+High income,HIC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+High income,HIC,Urban population,SP.URB.TOTL,1960,557122492.0
+High income,HIC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+IBRD only,IBD,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,32.79057508111988
+IBRD only,IBD,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+IBRD only,IBD,"Children out of school, primary",SE.PRM.UNER,1960,
+IBRD only,IBD,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+IBRD only,IBD,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,18.95749801897604
+IBRD only,IBD,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+IBRD only,IBD,GDP (current US$),NY.GDP.MKTP.CD,1960,317482813174.2782
+IBRD only,IBD,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+IBRD only,IBD,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+IBRD only,IBD,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+IBRD only,IBD,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+IBRD only,IBD,"Labor force, total",SL.TLF.TOTL.IN,1960,
+IBRD only,IBD,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,47.69690004512292
+IBRD only,IBD,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,44.32926222457306
+IBRD only,IBD,Net migration,SM.POP.NETM,1960,-404732.0
+IBRD only,IBD,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+IBRD only,IBD,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+IBRD only,IBD,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,366876606.0
+IBRD only,IBD,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,384508473.0
+IBRD only,IBD,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,532744768.0
+IBRD only,IBD,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,535088322.0
+IBRD only,IBD,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,42662168.0
+IBRD only,IBD,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+IBRD only,IBD,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+IBRD only,IBD,Rural population,SP.RUR.TOTL,1960,1399589660.0
+IBRD only,IBD,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+IBRD only,IBD,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+IBRD only,IBD,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+IBRD only,IBD,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+IBRD only,IBD,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+IBRD only,IBD,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+IBRD only,IBD,Urban population,SP.URB.TOTL,1960,494111316.0
+IBRD only,IBD,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+IDA & IBRD total,IBT,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,35.3118901618887
+IDA & IBRD total,IBT,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+IDA & IBRD total,IBT,"Children out of school, primary",SE.PRM.UNER,1960,
+IDA & IBRD total,IBT,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+IDA & IBRD total,IBT,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,19.5686623189873
+IDA & IBRD total,IBT,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+IDA & IBRD total,IBT,GDP (current US$),NY.GDP.MKTP.CD,1960,361892242003.13947
+IDA & IBRD total,IBT,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+IDA & IBRD total,IBT,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+IDA & IBRD total,IBT,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+IDA & IBRD total,IBT,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+IDA & IBRD total,IBT,"Labor force, total",SL.TLF.TOTL.IN,1960,
+IDA & IBRD total,IBT,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,46.99789763370428
+IDA & IBRD total,IBT,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,43.87365567463692
+IDA & IBRD total,IBT,Net migration,SM.POP.NETM,1960,-475705.0
+IDA & IBRD total,IBT,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+IDA & IBRD total,IBT,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+IDA & IBRD total,IBT,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,449904541.0
+IDA & IBRD total,IBT,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,468894188.0
+IDA & IBRD total,IBT,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,639052872.0
+IDA & IBRD total,IBT,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,644500130.0
+IDA & IBRD total,IBT,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,49098790.0
+IDA & IBRD total,IBT,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+IDA & IBRD total,IBT,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+IDA & IBRD total,IBT,Rural population,SP.RUR.TOTL,1960,1740100361.0
+IDA & IBRD total,IBT,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+IDA & IBRD total,IBT,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+IDA & IBRD total,IBT,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+IDA & IBRD total,IBT,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+IDA & IBRD total,IBT,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+IDA & IBRD total,IBT,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+IDA & IBRD total,IBT,Urban population,SP.URB.TOTL,1960,548103154.0
+IDA & IBRD total,IBT,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+IDA blend,IDB,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.063950285956416
+IDA blend,IDB,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+IDA blend,IDB,"Children out of school, primary",SE.PRM.UNER,1960,
+IDA blend,IDB,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+IDA blend,IDB,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.12190205059112
+IDA blend,IDB,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+IDA blend,IDB,GDP (current US$),NY.GDP.MKTP.CD,1960,11879974957.797768
+IDA blend,IDB,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+IDA blend,IDB,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.8107130312580808
+IDA blend,IDB,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+IDA blend,IDB,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+IDA blend,IDB,"Labor force, total",SL.TLF.TOTL.IN,1960,
+IDA blend,IDB,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.46654435432292
+IDA blend,IDB,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.16572403682365
+IDA blend,IDB,Net migration,SM.POP.NETM,1960,13791.0
+IDA blend,IDB,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+IDA blend,IDB,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+IDA blend,IDB,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,25012109.0
+IDA blend,IDB,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,25529110.0
+IDA blend,IDB,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,32086267.0
+IDA blend,IDB,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,34392639.0
+IDA blend,IDB,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,1909106.0
+IDA blend,IDB,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+IDA blend,IDB,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+IDA blend,IDB,Rural population,SP.RUR.TOTL,1960,98309262.0
+IDA blend,IDB,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+IDA blend,IDB,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+IDA blend,IDB,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+IDA blend,IDB,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+IDA blend,IDB,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+IDA blend,IDB,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+IDA blend,IDB,Urban population,SP.URB.TOTL,1960,22492539.0
+IDA blend,IDB,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+IDA only,IDX,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.52566109210158
+IDA only,IDX,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+IDA only,IDX,"Children out of school, primary",SE.PRM.UNER,1960,
+IDA only,IDX,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+IDA only,IDX,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.659201185654503
+IDA only,IDX,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+IDA only,IDX,GDP (current US$),NY.GDP.MKTP.CD,1960,32343504360.89586
+IDA only,IDX,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+IDA only,IDX,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.3503449367178733
+IDA only,IDX,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+IDA only,IDX,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+IDA only,IDX,"Labor force, total",SL.TLF.TOTL.IN,1960,
+IDA only,IDX,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.70552300856559
+IDA only,IDX,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,41.49596878461258
+IDA only,IDX,Net migration,SM.POP.NETM,1960,-84764.0
+IDA only,IDX,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+IDA only,IDX,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+IDA only,IDX,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,58015826.0
+IDA only,IDX,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,58856605.0
+IDA only,IDX,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,74221837.0
+IDA only,IDX,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,75019169.0
+IDA only,IDX,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,4527516.0
+IDA only,IDX,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+IDA only,IDX,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+IDA only,IDX,Rural population,SP.RUR.TOTL,1960,242201439.0
+IDA only,IDX,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+IDA only,IDX,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+IDA only,IDX,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+IDA only,IDX,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+IDA only,IDX,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+IDA only,IDX,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+IDA only,IDX,Urban population,SP.URB.TOTL,1960,31499299.0
+IDA only,IDX,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+IDA total,IDA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.38463131709751
+IDA total,IDA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+IDA total,IDA,"Children out of school, primary",SE.PRM.UNER,1960,
+IDA total,IDA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+IDA total,IDA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.49508292132251
+IDA total,IDA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+IDA total,IDA,GDP (current US$),NY.GDP.MKTP.CD,1960,43246282845.09152
+IDA total,IDA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+IDA total,IDA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.1649848424455511
+IDA total,IDA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+IDA total,IDA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+IDA total,IDA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+IDA total,IDA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.63349288347767
+IDA total,IDA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,41.70319971443167
+IDA total,IDA,Net migration,SM.POP.NETM,1960,-70973.0
+IDA total,IDA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+IDA total,IDA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+IDA total,IDA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,83027935.0
+IDA total,IDA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,84385715.0
+IDA total,IDA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,106308104.0
+IDA total,IDA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,109411808.0
+IDA total,IDA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,6436622.0
+IDA total,IDA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+IDA total,IDA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+IDA total,IDA,Rural population,SP.RUR.TOTL,1960,340510701.0
+IDA total,IDA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+IDA total,IDA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+IDA total,IDA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+IDA total,IDA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+IDA total,IDA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+IDA total,IDA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+IDA total,IDA,Urban population,SP.URB.TOTL,1960,53991838.0
+IDA total,IDA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Late-demographic dividend,LTE,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,25.83211811556413
+Late-demographic dividend,LTE,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Late-demographic dividend,LTE,"Children out of school, primary",SE.PRM.UNER,1960,
+Late-demographic dividend,LTE,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Late-demographic dividend,LTE,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,19.7972275244678
+Late-demographic dividend,LTE,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Late-demographic dividend,LTE,GDP (current US$),NY.GDP.MKTP.CD,1960,183039562224.25528
+Late-demographic dividend,LTE,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Late-demographic dividend,LTE,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Late-demographic dividend,LTE,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Late-demographic dividend,LTE,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Late-demographic dividend,LTE,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Late-demographic dividend,LTE,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,46.42567453122939
+Late-demographic dividend,LTE,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,41.6261821222869
+Late-demographic dividend,LTE,Net migration,SM.POP.NETM,1960,-422318.0
+Late-demographic dividend,LTE,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Late-demographic dividend,LTE,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Late-demographic dividend,LTE,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,209201265.0
+Late-demographic dividend,LTE,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,219019187.0
+Late-demographic dividend,LTE,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,311135315.0
+Late-demographic dividend,LTE,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,308887549.0
+Late-demographic dividend,LTE,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,27726524.0
+Late-demographic dividend,LTE,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Late-demographic dividend,LTE,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Late-demographic dividend,LTE,Rural population,SP.RUR.TOTL,1960,807691799.0
+Late-demographic dividend,LTE,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Late-demographic dividend,LTE,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Late-demographic dividend,LTE,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Late-demographic dividend,LTE,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Late-demographic dividend,LTE,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Late-demographic dividend,LTE,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Late-demographic dividend,LTE,Urban population,SP.URB.TOTL,1960,287188270.0
+Late-demographic dividend,LTE,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Latin America & Caribbean,LCN,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,42.0396132279933
+Latin America & Caribbean,LCN,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Latin America & Caribbean,LCN,"Children out of school, primary",SE.PRM.UNER,1960,
+Latin America & Caribbean,LCN,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Latin America & Caribbean,LCN,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,13.19960981261975
+Latin America & Caribbean,LCN,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Latin America & Caribbean,LCN,GDP (current US$),NY.GDP.MKTP.CD,1960,84329838400.42793
+Latin America & Caribbean,LCN,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Latin America & Caribbean,LCN,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,3.431346250287683
+Latin America & Caribbean,LCN,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Latin America & Caribbean,LCN,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Latin America & Caribbean,LCN,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Latin America & Caribbean,LCN,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,57.24853433637941
+Latin America & Caribbean,LCN,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,53.069933071849576
+Latin America & Caribbean,LCN,Net migration,SM.POP.NETM,1960,-299395.0
+Latin America & Caribbean,LCN,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Latin America & Caribbean,LCN,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Latin America & Caribbean,LCN,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,46690004.0
+Latin America & Caribbean,LCN,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,47532058.0
+Latin America & Caribbean,LCN,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,58743769.0
+Latin America & Caribbean,LCN,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,58589778.0
+Latin America & Caribbean,LCN,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3748050.0
+Latin America & Caribbean,LCN,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Latin America & Caribbean,LCN,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Latin America & Caribbean,LCN,Rural population,SP.RUR.TOTL,1960,110499064.0
+Latin America & Caribbean,LCN,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Latin America & Caribbean,LCN,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Latin America & Caribbean,LCN,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Latin America & Caribbean,LCN,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Latin America & Caribbean,LCN,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Latin America & Caribbean,LCN,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Latin America & Caribbean,LCN,Urban population,SP.URB.TOTL,1960,108121381.0
+Latin America & Caribbean,LCN,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,42.6244387993857
+Latin America & Caribbean (excluding high income),LAC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Children out of school, primary",SE.PRM.UNER,1960,
+Latin America & Caribbean (excluding high income),LAC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,13.61075562921719
+Latin America & Caribbean (excluding high income),LAC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,GDP (current US$),NY.GDP.MKTP.CD,1960,68130522456.46815
+Latin America & Caribbean (excluding high income),LAC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,3.3565293133834166
+Latin America & Caribbean (excluding high income),LAC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Latin America & Caribbean (excluding high income),LAC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Latin America & Caribbean (excluding high income),LAC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,56.57224280225791
+Latin America & Caribbean (excluding high income),LAC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,52.43247804046127
+Latin America & Caribbean (excluding high income),LAC,Net migration,SM.POP.NETM,1960,-240297.0
+Latin America & Caribbean (excluding high income),LAC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,41666470.0
+Latin America & Caribbean (excluding high income),LAC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,42393382.0
+Latin America & Caribbean (excluding high income),LAC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,52077282.0
+Latin America & Caribbean (excluding high income),LAC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,51869972.0
+Latin America & Caribbean (excluding high income),LAC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3267018.0
+Latin America & Caribbean (excluding high income),LAC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Latin America & Caribbean (excluding high income),LAC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,Rural population,SP.RUR.TOTL,1960,100965370.0
+Latin America & Caribbean (excluding high income),LAC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Latin America & Caribbean (excluding high income),LAC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Latin America & Caribbean (excluding high income),LAC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Latin America & Caribbean (excluding high income),LAC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Latin America & Caribbean (excluding high income),LAC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Latin America & Caribbean (excluding high income),LAC,Urban population,SP.URB.TOTL,1960,93218024.0
+Latin America & Caribbean (excluding high income),LAC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,42.48086789751396
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Children out of school, primary",SE.PRM.UNER,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,13.429536132963532
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,GDP (current US$),NY.GDP.MKTP.CD,1960,79359156748.2322
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,3.388390409930617
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,56.79424283146099
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,52.61146043498233
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Net migration,SM.POP.NETM,1960,-248967.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,44845677.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,45622425.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,55887330.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,55688627.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3535102.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Rural population,SP.RUR.TOTL,1960,106050996.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Latin America & the Caribbean (IDA & IBRD countries),TLA,Urban population,SP.URB.TOTL,1960,102620111.0
+Latin America & the Caribbean (IDA & IBRD countries),TLA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Least developed countries: UN classification,LDC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.91032891765272
+Least developed countries: UN classification,LDC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Least developed countries: UN classification,LDC,"Children out of school, primary",SE.PRM.UNER,1960,
+Least developed countries: UN classification,LDC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Least developed countries: UN classification,LDC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.594653591845105
+Least developed countries: UN classification,LDC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Least developed countries: UN classification,LDC,GDP (current US$),NY.GDP.MKTP.CD,1960,28125007491.224457
+Least developed countries: UN classification,LDC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Least developed countries: UN classification,LDC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.263299631668065
+Least developed countries: UN classification,LDC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Least developed countries: UN classification,LDC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Least developed countries: UN classification,LDC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Least developed countries: UN classification,LDC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,42.244836950375486
+Least developed countries: UN classification,LDC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,40.1392959969842
+Least developed countries: UN classification,LDC,Net migration,SM.POP.NETM,1960,-164999.0
+Least developed countries: UN classification,LDC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Least developed countries: UN classification,LDC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Least developed countries: UN classification,LDC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,51624529.0
+Least developed countries: UN classification,LDC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,52310917.0
+Least developed countries: UN classification,LDC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,66719026.0
+Least developed countries: UN classification,LDC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,67003211.0
+Least developed countries: UN classification,LDC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3954443.0
+Least developed countries: UN classification,LDC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Least developed countries: UN classification,LDC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Least developed countries: UN classification,LDC,Rural population,SP.RUR.TOTL,1960,221398195.0
+Least developed countries: UN classification,LDC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Least developed countries: UN classification,LDC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Least developed countries: UN classification,LDC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Least developed countries: UN classification,LDC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Least developed countries: UN classification,LDC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Least developed countries: UN classification,LDC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Least developed countries: UN classification,LDC,Urban population,SP.URB.TOTL,1960,23650401.0
+Least developed countries: UN classification,LDC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Low & middle income,LMY,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,36.34296436979536
+Low & middle income,LMY,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Low & middle income,LMY,"Children out of school, primary",SE.PRM.UNER,1960,
+Low & middle income,LMY,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Low & middle income,LMY,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.59231432104648
+Low & middle income,LMY,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Low & middle income,LMY,GDP (current US$),NY.GDP.MKTP.CD,1960,276980151259.58105
+Low & middle income,LMY,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Low & middle income,LMY,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Low & middle income,LMY,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Low & middle income,LMY,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Low & middle income,LMY,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Low & middle income,LMY,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,44.72682700421348
+Low & middle income,LMY,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.282606564015495
+Low & middle income,LMY,Net migration,SM.POP.NETM,1960,-165045.0
+Low & middle income,LMY,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Low & middle income,LMY,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Low & middle income,LMY,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,421965112.0
+Low & middle income,LMY,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,439972568.0
+Low & middle income,LMY,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,576441626.0
+Low & middle income,LMY,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,592309214.0
+Low & middle income,LMY,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,41710272.0
+Low & middle income,LMY,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Low & middle income,LMY,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Low & middle income,LMY,Rural population,SP.RUR.TOTL,1960,1651122418.0
+Low & middle income,LMY,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Low & middle income,LMY,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Low & middle income,LMY,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Low & middle income,LMY,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Low & middle income,LMY,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Low & middle income,LMY,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Low & middle income,LMY,Urban population,SP.URB.TOTL,1960,454311792.0
+Low & middle income,LMY,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Low income,LIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.71182296557144
+Low income,LIC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Low income,LIC,"Children out of school, primary",SE.PRM.UNER,1960,
+Low income,LIC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Low income,LIC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.64173165866048
+Low income,LIC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Low income,LIC,GDP (current US$),NY.GDP.MKTP.CD,1960,14591716825.875666
+Low income,LIC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Low income,LIC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.439186008132397
+Low income,LIC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Low income,LIC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Low income,LIC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Low income,LIC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.12704923452474
+Low income,LIC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.53888723137284
+Low income,LIC,Net migration,SM.POP.NETM,1960,-114845.0
+Low income,LIC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Low income,LIC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Low income,LIC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,28934446.0
+Low income,LIC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,29070058.0
+Low income,LIC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,37873357.0
+Low income,LIC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,36114227.0
+Low income,LIC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,2318144.0
+Low income,LIC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Low income,LIC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Low income,LIC,Rural population,SP.RUR.TOTL,1960,117791924.0
+Low income,LIC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Low income,LIC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Low income,LIC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Low income,LIC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Low income,LIC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Low income,LIC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Low income,LIC,Urban population,SP.URB.TOTL,1960,18333807.0
+Low income,LIC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Lower middle income,LMC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,44.58792233748487
+Lower middle income,LMC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Lower middle income,LMC,"Children out of school, primary",SE.PRM.UNER,1960,
+Lower middle income,LMC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Lower middle income,LMC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,19.68388095101787
+Lower middle income,LMC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Lower middle income,LMC,GDP (current US$),NY.GDP.MKTP.CD,1960,85185625016.44772
+Lower middle income,LMC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Lower middle income,LMC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.7429745290919143
+Lower middle income,LMC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Lower middle income,LMC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Lower middle income,LMC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Lower middle income,LMC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,46.04609452174627
+Lower middle income,LMC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,45.686358372750966
+Lower middle income,LMC,Net migration,SM.POP.NETM,1960,-85573.0
+Lower middle income,LMC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Lower middle income,LMC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Lower middle income,LMC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,165907597.0
+Lower middle income,LMC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,173711613.0
+Lower middle income,LMC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,220459969.0
+Lower middle income,LMC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,231932667.0
+Lower middle income,LMC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,13816547.0
+Lower middle income,LMC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Lower middle income,LMC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Lower middle income,LMC,Rural population,SP.RUR.TOTL,1960,669579071.0
+Lower middle income,LMC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Lower middle income,LMC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Lower middle income,LMC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Lower middle income,LMC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Lower middle income,LMC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Lower middle income,LMC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Lower middle income,LMC,Urban population,SP.URB.TOTL,1960,149468083.0
+Lower middle income,LMC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Middle East & North Africa,MEA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,48.040750613589886
+Middle East & North Africa,MEA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Middle East & North Africa,MEA,"Children out of school, primary",SE.PRM.UNER,1960,
+Middle East & North Africa,MEA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Middle East & North Africa,MEA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,21.916344606601093
+Middle East & North Africa,MEA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Middle East & North Africa,MEA,GDP (current US$),NY.GDP.MKTP.CD,1960,25169910581.932384
+Middle East & North Africa,MEA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Middle East & North Africa,MEA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.9612739403722896
+Middle East & North Africa,MEA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Middle East & North Africa,MEA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Middle East & North Africa,MEA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Middle East & North Africa,MEA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,45.884907066169504
+Middle East & North Africa,MEA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.70656985875845
+Middle East & North Africa,MEA,Net migration,SM.POP.NETM,1960,-20282.0
+Middle East & North Africa,MEA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Middle East & North Africa,MEA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Middle East & North Africa,MEA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,21680058.0
+Middle East & North Africa,MEA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,22681462.0
+Middle East & North Africa,MEA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,27386549.0
+Middle East & North Africa,MEA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,27599486.0
+Middle East & North Africa,MEA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,2055422.0
+Middle East & North Africa,MEA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Middle East & North Africa,MEA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Middle East & North Africa,MEA,Rural population,SP.RUR.TOTL,1960,67118104.0
+Middle East & North Africa,MEA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Middle East & North Africa,MEA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Middle East & North Africa,MEA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Middle East & North Africa,MEA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Middle East & North Africa,MEA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Middle East & North Africa,MEA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Middle East & North Africa,MEA,Urban population,SP.URB.TOTL,1960,36070935.0
+Middle East & North Africa,MEA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,48.47694890756208
+Middle East & North Africa (excluding high income),MNA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Children out of school, primary",SE.PRM.UNER,1960,
+Middle East & North Africa (excluding high income),MNA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.35136946479621
+Middle East & North Africa (excluding high income),MNA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,GDP (current US$),NY.GDP.MKTP.CD,1960,18009066976.651447
+Middle East & North Africa (excluding high income),MNA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.851243424790419
+Middle East & North Africa (excluding high income),MNA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Middle East & North Africa (excluding high income),MNA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Middle East & North Africa (excluding high income),MNA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,45.73401544981933
+Middle East & North Africa (excluding high income),MNA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.5884439200197
+Middle East & North Africa (excluding high income),MNA,Net migration,SM.POP.NETM,1960,-65459.0
+Middle East & North Africa (excluding high income),MNA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,20507749.0
+Middle East & North Africa (excluding high income),MNA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,21462936.0
+Middle East & North Africa (excluding high income),MNA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,25740132.0
+Middle East & North Africa (excluding high income),MNA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,25829378.0
+Middle East & North Africa (excluding high income),MNA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,1927119.0
+Middle East & North Africa (excluding high income),MNA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Middle East & North Africa (excluding high income),MNA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,Rural population,SP.RUR.TOTL,1960,64331147.0
+Middle East & North Africa (excluding high income),MNA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Middle East & North Africa (excluding high income),MNA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Middle East & North Africa (excluding high income),MNA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Middle East & North Africa (excluding high income),MNA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Middle East & North Africa (excluding high income),MNA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Middle East & North Africa (excluding high income),MNA,Urban population,SP.URB.TOTL,1960,32807553.0
+Middle East & North Africa (excluding high income),MNA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,48.47694890756208
+Middle East & North Africa (IDA & IBRD countries),TMN,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Children out of school, primary",SE.PRM.UNER,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,22.35136946479621
+Middle East & North Africa (IDA & IBRD countries),TMN,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,GDP (current US$),NY.GDP.MKTP.CD,1960,17842510180.47033
+Middle East & North Africa (IDA & IBRD countries),TMN,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.8512434247904197
+Middle East & North Africa (IDA & IBRD countries),TMN,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,45.73401544981933
+Middle East & North Africa (IDA & IBRD countries),TMN,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.58844392001969
+Middle East & North Africa (IDA & IBRD countries),TMN,Net migration,SM.POP.NETM,1960,-47797.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,20507749.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,21462936.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,25740132.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,25829378.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,1927119.0
+Middle East & North Africa (IDA & IBRD countries),TMN,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,Rural population,SP.RUR.TOTL,1960,64331147.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Middle East & North Africa (IDA & IBRD countries),TMN,Urban population,SP.URB.TOTL,1960,32807553.0
+Middle East & North Africa (IDA & IBRD countries),TMN,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Middle income,MIC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,35.55750051659693
+Middle income,MIC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Middle income,MIC,"Children out of school, primary",SE.PRM.UNER,1960,
+Middle income,MIC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Middle income,MIC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.38163291694296
+Middle income,MIC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Middle income,MIC,GDP (current US$),NY.GDP.MKTP.CD,1960,263792074041.0933
+Middle income,MIC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Middle income,MIC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Middle income,MIC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Middle income,MIC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Middle income,MIC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Middle income,MIC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,44.84071698033112
+Middle income,MIC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,42.46656352791859
+Middle income,MIC,Net migration,SM.POP.NETM,1960,-50200.0
+Middle income,MIC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Middle income,MIC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Middle income,MIC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,393030666.0
+Middle income,MIC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,410902510.0
+Middle income,MIC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,538568269.0
+Middle income,MIC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,556194987.0
+Middle income,MIC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,39392128.0
+Middle income,MIC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Middle income,MIC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Middle income,MIC,Rural population,SP.RUR.TOTL,1960,1533330494.0
+Middle income,MIC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Middle income,MIC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Middle income,MIC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Middle income,MIC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Middle income,MIC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Middle income,MIC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Middle income,MIC,Urban population,SP.URB.TOTL,1960,435977985.0
+Middle income,MIC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+North America,NAC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,23.9710375791544
+North America,NAC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+North America,NAC,"Children out of school, primary",SE.PRM.UNER,1960,
+North America,NAC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+North America,NAC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,9.346527555409065
+North America,NAC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+North America,NAC,GDP (current US$),NY.GDP.MKTP.CD,1960,582624755153.8474
+North America,NAC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+North America,NAC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,8.929438968896822
+North America,NAC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+North America,NAC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+North America,NAC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+North America,NAC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,73.19140622085132
+North America,NAC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,66.75316371454178
+North America,NAC,Net migration,SM.POP.NETM,1960,472345.0
+North America,NAC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+North America,NAC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+North America,NAC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,30947306.0
+North America,NAC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,31598913.0
+North America,NAC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,60386815.0
+North America,NAC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,58367309.0
+North America,NAC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,9509891.0
+North America,NAC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+North America,NAC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+North America,NAC,Rural population,SP.RUR.TOTL,1960,59749503.0
+North America,NAC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+North America,NAC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+North America,NAC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+North America,NAC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+North America,NAC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+North America,NAC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+North America,NAC,Urban population,SP.URB.TOTL,1960,138873061.0
+North America,NAC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Not classified,INX,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,
+Not classified,INX,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Not classified,INX,"Children out of school, primary",SE.PRM.UNER,1960,
+Not classified,INX,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Not classified,INX,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,
+Not classified,INX,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Not classified,INX,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Not classified,INX,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Not classified,INX,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Not classified,INX,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Not classified,INX,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Not classified,INX,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Not classified,INX,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,
+Not classified,INX,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,
+Not classified,INX,Net migration,SM.POP.NETM,1960,
+Not classified,INX,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Not classified,INX,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Not classified,INX,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,
+Not classified,INX,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,
+Not classified,INX,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,
+Not classified,INX,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,
+Not classified,INX,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,
+Not classified,INX,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Not classified,INX,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Not classified,INX,Rural population,SP.RUR.TOTL,1960,
+Not classified,INX,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Not classified,INX,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Not classified,INX,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Not classified,INX,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Not classified,INX,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Not classified,INX,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Not classified,INX,Urban population,SP.URB.TOTL,1960,
+Not classified,INX,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+OECD members,OED,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,23.48825821705703
+OECD members,OED,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+OECD members,OED,"Children out of school, primary",SE.PRM.UNER,1960,
+OECD members,OED,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+OECD members,OED,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,10.28283536431563
+OECD members,OED,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+OECD members,OED,GDP (current US$),NY.GDP.MKTP.CD,1960,1061139061863.138
+OECD members,OED,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+OECD members,OED,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,8.561445674286484
+OECD members,OED,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+OECD members,OED,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+OECD members,OED,"Labor force, total",SL.TLF.TOTL.IN,1960,
+OECD members,OED,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,70.09731744835302
+OECD members,OED,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,64.47046920209074
+OECD members,OED,Net migration,SM.POP.NETM,1960,276837.0
+OECD members,OED,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+OECD members,OED,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+OECD members,OED,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,120013286.0
+OECD members,OED,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,124217799.0
+OECD members,OED,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,255859095.0
+OECD members,OED,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,242921178.0
+OECD members,OED,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,38650943.0
+OECD members,OED,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+OECD members,OED,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+OECD members,OED,Rural population,SP.RUR.TOTL,1960,306497182.0
+OECD members,OED,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+OECD members,OED,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+OECD members,OED,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+OECD members,OED,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+OECD members,OED,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+OECD members,OED,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+OECD members,OED,Urban population,SP.URB.TOTL,1960,503083484.0
+OECD members,OED,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Other small states,OSS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,33.48927170488013
+Other small states,OSS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Other small states,OSS,"Children out of school, primary",SE.PRM.UNER,1960,
+Other small states,OSS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Other small states,OSS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,14.605432148475144
+Other small states,OSS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Other small states,OSS,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Other small states,OSS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Other small states,OSS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Other small states,OSS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Other small states,OSS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Other small states,OSS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Other small states,OSS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,60.033745412655726
+Other small states,OSS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,54.41404203248953
+Other small states,OSS,Net migration,SM.POP.NETM,1960,-5814.0
+Other small states,OSS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Other small states,OSS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Other small states,OSS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,983865.0
+Other small states,OSS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,1009626.0
+Other small states,OSS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,1634019.0
+Other small states,OSS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,1515870.0
+Other small states,OSS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,195570.0
+Other small states,OSS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Other small states,OSS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Other small states,OSS,Rural population,SP.RUR.TOTL,1960,3402968.0
+Other small states,OSS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Other small states,OSS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Other small states,OSS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Other small states,OSS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Other small states,OSS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Other small states,OSS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Other small states,OSS,Urban population,SP.URB.TOTL,1960,2055885.0
+Other small states,OSS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Pacific island small states,PSS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,45.13086342038327
+Pacific island small states,PSS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Pacific island small states,PSS,"Children out of school, primary",SE.PRM.UNER,1960,
+Pacific island small states,PSS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Pacific island small states,PSS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,13.144395250624918
+Pacific island small states,PSS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Pacific island small states,PSS,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Pacific island small states,PSS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Pacific island small states,PSS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,4.836772842292807
+Pacific island small states,PSS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Pacific island small states,PSS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Pacific island small states,PSS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Pacific island small states,PSS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,57.13422430445895
+Pacific island small states,PSS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,53.23739637072426
+Pacific island small states,PSS,Net migration,SM.POP.NETM,1960,-3432.0
+Pacific island small states,PSS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Pacific island small states,PSS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Pacific island small states,PSS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,206417.0
+Pacific island small states,PSS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,216426.0
+Pacific island small states,PSS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,220162.0
+Pacific island small states,PSS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,238206.0
+Pacific island small states,PSS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,13546.0
+Pacific island small states,PSS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Pacific island small states,PSS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Pacific island small states,PSS,Rural population,SP.RUR.TOTL,1960,710962.0
+Pacific island small states,PSS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Pacific island small states,PSS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Pacific island small states,PSS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Pacific island small states,PSS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Pacific island small states,PSS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Pacific island small states,PSS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Pacific island small states,PSS,Urban population,SP.URB.TOTL,1960,201158.0
+Pacific island small states,PSS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Post-demographic dividend,PST,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,20.99076315627111
+Post-demographic dividend,PST,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Post-demographic dividend,PST,"Children out of school, primary",SE.PRM.UNER,1960,
+Post-demographic dividend,PST,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Post-demographic dividend,PST,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,9.710431992089523
+Post-demographic dividend,PST,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Post-demographic dividend,PST,GDP (current US$),NY.GDP.MKTP.CD,1960,1036595543314.3788
+Post-demographic dividend,PST,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Post-demographic dividend,PST,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,9.286355865532013
+Post-demographic dividend,PST,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Post-demographic dividend,PST,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Post-demographic dividend,PST,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Post-demographic dividend,PST,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,71.72075137937321
+Post-demographic dividend,PST,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,66.04157899029119
+Post-demographic dividend,PST,Net migration,SM.POP.NETM,1960,408448.0
+Post-demographic dividend,PST,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Post-demographic dividend,PST,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Post-demographic dividend,PST,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,104986103.0
+Post-demographic dividend,PST,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,108663124.0
+Post-demographic dividend,PST,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,246757989.0
+Post-demographic dividend,PST,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,229942197.0
+Post-demographic dividend,PST,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,38621978.0
+Post-demographic dividend,PST,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Post-demographic dividend,PST,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Post-demographic dividend,PST,Rural population,SP.RUR.TOTL,1960,277906381.0
+Post-demographic dividend,PST,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Post-demographic dividend,PST,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Post-demographic dividend,PST,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Post-demographic dividend,PST,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Post-demographic dividend,PST,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Post-demographic dividend,PST,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Post-demographic dividend,PST,Urban population,SP.URB.TOTL,1960,478473004.0
+Post-demographic dividend,PST,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Pre-demographic dividend,PRE,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.93135792744253
+Pre-demographic dividend,PRE,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Pre-demographic dividend,PRE,"Children out of school, primary",SE.PRM.UNER,1960,
+Pre-demographic dividend,PRE,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Pre-demographic dividend,PRE,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,24.654009765935477
+Pre-demographic dividend,PRE,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Pre-demographic dividend,PRE,GDP (current US$),NY.GDP.MKTP.CD,1960,24374805009.090927
+Pre-demographic dividend,PRE,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Pre-demographic dividend,PRE,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.421182046659949
+Pre-demographic dividend,PRE,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Pre-demographic dividend,PRE,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Pre-demographic dividend,PRE,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Pre-demographic dividend,PRE,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,41.65342122485786
+Pre-demographic dividend,PRE,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,38.23595442521327
+Pre-demographic dividend,PRE,Net migration,SM.POP.NETM,1960,-92553.0
+Pre-demographic dividend,PRE,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Pre-demographic dividend,PRE,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Pre-demographic dividend,PRE,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,40250610.0
+Pre-demographic dividend,PRE,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,40294167.0
+Pre-demographic dividend,PRE,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,51863533.0
+Pre-demographic dividend,PRE,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,50640159.0
+Pre-demographic dividend,PRE,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3196217.0
+Pre-demographic dividend,PRE,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Pre-demographic dividend,PRE,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Pre-demographic dividend,PRE,Rural population,SP.RUR.TOTL,1960,163542105.0
+Pre-demographic dividend,PRE,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Pre-demographic dividend,PRE,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Pre-demographic dividend,PRE,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Pre-demographic dividend,PRE,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Pre-demographic dividend,PRE,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Pre-demographic dividend,PRE,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Pre-demographic dividend,PRE,Urban population,SP.URB.TOTL,1960,25378148.0
+Pre-demographic dividend,PRE,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Small states,SST,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,36.6851597156887
+Small states,SST,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Small states,SST,"Children out of school, primary",SE.PRM.UNER,1960,
+Small states,SST,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Small states,SST,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,13.786121711775472
+Small states,SST,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Small states,SST,GDP (current US$),NY.GDP.MKTP.CD,1960,
+Small states,SST,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Small states,SST,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Small states,SST,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Small states,SST,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Small states,SST,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Small states,SST,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,59.99653820567912
+Small states,SST,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,54.83283953638469
+Small states,SST,Net migration,SM.POP.NETM,1960,-23073.0
+Small states,SST,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Small states,SST,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Small states,SST,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,1568424.0
+Small states,SST,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,1610421.0
+Small states,SST,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,2308533.0
+Small states,SST,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,2180574.0
+Small states,SST,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,251825.0
+Small states,SST,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Small states,SST,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Small states,SST,Rural population,SP.RUR.TOTL,1960,5203556.0
+Small states,SST,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Small states,SST,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Small states,SST,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Small states,SST,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Small states,SST,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Small states,SST,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Small states,SST,Urban population,SP.URB.TOTL,1960,2880822.0
+Small states,SST,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+South Asia,SAS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,43.81893738542078
+South Asia,SAS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+South Asia,SAS,"Children out of school, primary",SE.PRM.UNER,1960,
+South Asia,SAS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+South Asia,SAS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,19.82265532817561
+South Asia,SAS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+South Asia,SAS,GDP (current US$),NY.GDP.MKTP.CD,1960,47274328378.85429
+South Asia,SAS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+South Asia,SAS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.5065916581349902
+South Asia,SAS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+South Asia,SAS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+South Asia,SAS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+South Asia,SAS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,44.50112967860777
+South Asia,SAS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,45.97316932863482
+South Asia,SAS,Net migration,SM.POP.NETM,1960,138757.0
+South Asia,SAS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+South Asia,SAS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+South Asia,SAS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,111551089.0
+South Asia,SAS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,118083910.0
+South Asia,SAS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,150759142.0
+South Asia,SAS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,164298664.0
+South Asia,SAS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,8836807.0
+South Asia,SAS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+South Asia,SAS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+South Asia,SAS,Rural population,SP.RUR.TOTL,1960,469034728.0
+South Asia,SAS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+South Asia,SAS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+South Asia,SAS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+South Asia,SAS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+South Asia,SAS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+South Asia,SAS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+South Asia,SAS,Urban population,SP.URB.TOTL,1960,93628943.0
+South Asia,SAS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,43.81893738542078
+South Asia (IDA & IBRD),TSA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Children out of school, primary",SE.PRM.UNER,1960,
+South Asia (IDA & IBRD),TSA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,19.82265532817561
+South Asia (IDA & IBRD),TSA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+South Asia (IDA & IBRD),TSA,GDP (current US$),NY.GDP.MKTP.CD,1960,47274328378.85429
+South Asia (IDA & IBRD),TSA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,0.5065916581349902
+South Asia (IDA & IBRD),TSA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+South Asia (IDA & IBRD),TSA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+South Asia (IDA & IBRD),TSA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,44.50112967860777
+South Asia (IDA & IBRD),TSA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,45.97316932863482
+South Asia (IDA & IBRD),TSA,Net migration,SM.POP.NETM,1960,138757.0
+South Asia (IDA & IBRD),TSA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,111551089.0
+South Asia (IDA & IBRD),TSA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,118083910.0
+South Asia (IDA & IBRD),TSA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,150759142.0
+South Asia (IDA & IBRD),TSA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,164298664.0
+South Asia (IDA & IBRD),TSA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,8836807.0
+South Asia (IDA & IBRD),TSA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+South Asia (IDA & IBRD),TSA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+South Asia (IDA & IBRD),TSA,Rural population,SP.RUR.TOTL,1960,469034728.0
+South Asia (IDA & IBRD),TSA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+South Asia (IDA & IBRD),TSA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+South Asia (IDA & IBRD),TSA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+South Asia (IDA & IBRD),TSA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+South Asia (IDA & IBRD),TSA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+South Asia (IDA & IBRD),TSA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+South Asia (IDA & IBRD),TSA,Urban population,SP.URB.TOTL,1960,93628943.0
+South Asia (IDA & IBRD),TSA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Sub-Saharan Africa,SSF,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.62913684679743
+Sub-Saharan Africa,SSF,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Sub-Saharan Africa,SSF,"Children out of school, primary",SE.PRM.UNER,1960,
+Sub-Saharan Africa,SSF,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Sub-Saharan Africa,SSF,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.314155615060944
+Sub-Saharan Africa,SSF,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Sub-Saharan Africa,SSF,GDP (current US$),NY.GDP.MKTP.CD,1960,35999878594.04332
+Sub-Saharan Africa,SSF,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Sub-Saharan Africa,SSF,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.4047115456163537
+Sub-Saharan Africa,SSF,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Sub-Saharan Africa,SSF,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Sub-Saharan Africa,SSF,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Sub-Saharan Africa,SSF,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.35127049008033
+Sub-Saharan Africa,SSF,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.64810068531056
+Sub-Saharan Africa,SSF,Net migration,SM.POP.NETM,1960,-103463.0
+Sub-Saharan Africa,SSF,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Sub-Saharan Africa,SSF,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Sub-Saharan Africa,SSF,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,48817264.0
+Sub-Saharan Africa,SSF,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,48927893.0
+Sub-Saharan Africa,SSF,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,62089683.0
+Sub-Saharan Africa,SSF,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,60746872.0
+Sub-Saharan Africa,SSF,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3931026.0
+Sub-Saharan Africa,SSF,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Sub-Saharan Africa,SSF,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Sub-Saharan Africa,SSF,Rural population,SP.RUR.TOTL,1960,194381298.0
+Sub-Saharan Africa,SSF,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Sub-Saharan Africa,SSF,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Sub-Saharan Africa,SSF,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Sub-Saharan Africa,SSF,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Sub-Saharan Africa,SSF,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Sub-Saharan Africa,SSF,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Sub-Saharan Africa,SSF,Urban population,SP.URB.TOTL,1960,33321707.0
+Sub-Saharan Africa,SSF,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.63117808303876
+Sub-Saharan Africa (excluding high income),SSA,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Children out of school, primary",SE.PRM.UNER,1960,
+Sub-Saharan Africa (excluding high income),SSA,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.31603548476101
+Sub-Saharan Africa (excluding high income),SSA,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,GDP (current US$),NY.GDP.MKTP.CD,1960,35988399588.819435
+Sub-Saharan Africa (excluding high income),SSA,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.4035436718507313
+Sub-Saharan Africa (excluding high income),SSA,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.3477109545766
+Sub-Saharan Africa (excluding high income),SSA,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.6446687153941
+Sub-Saharan Africa (excluding high income),SSA,Net migration,SM.POP.NETM,1960,-103283.0
+Sub-Saharan Africa (excluding high income),SSA,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,48809643.0
+Sub-Saharan Africa (excluding high income),SSA,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,48919429.0
+Sub-Saharan Africa (excluding high income),SSA,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,62078075.0
+Sub-Saharan Africa (excluding high income),SSA,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,60735388.0
+Sub-Saharan Africa (excluding high income),SSA,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3929555.0
+Sub-Saharan Africa (excluding high income),SSA,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Sub-Saharan Africa (excluding high income),SSA,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,Rural population,SP.RUR.TOTL,1960,194351138.0
+Sub-Saharan Africa (excluding high income),SSA,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Sub-Saharan Africa (excluding high income),SSA,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Sub-Saharan Africa (excluding high income),SSA,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Sub-Saharan Africa (excluding high income),SSA,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Sub-Saharan Africa (excluding high income),SSA,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Sub-Saharan Africa (excluding high income),SSA,Urban population,SP.URB.TOTL,1960,33310167.0
+Sub-Saharan Africa (excluding high income),SSA,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,47.62913684679743
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Children out of school, primary",SE.PRM.UNER,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,23.314155615060937
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,GDP (current US$),NY.GDP.MKTP.CD,1960,35999878594.04333
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,1.4047115456163537
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.35127049008033
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,39.64810068531057
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Net migration,SM.POP.NETM,1960,-103463.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,48817264.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,48927893.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,62089683.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,60746872.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,3931026.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Rural population,SP.RUR.TOTL,1960,194381298.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Sub-Saharan Africa (IDA & IBRD countries),TSS,Urban population,SP.URB.TOTL,1960,33321707.0
+Sub-Saharan Africa (IDA & IBRD countries),TSS,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+Upper middle income,UMC,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,29.13286130551221
+Upper middle income,UMC,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+Upper middle income,UMC,"Children out of school, primary",SE.PRM.UNER,1960,
+Upper middle income,UMC,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+Upper middle income,UMC,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,20.878044350296477
+Upper middle income,UMC,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+Upper middle income,UMC,GDP (current US$),NY.GDP.MKTP.CD,1960,179283983325.45853
+Upper middle income,UMC,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+Upper middle income,UMC,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+Upper middle income,UMC,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+Upper middle income,UMC,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+Upper middle income,UMC,"Labor force, total",SL.TLF.TOTL.IN,1960,
+Upper middle income,UMC,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,43.995645031713934
+Upper middle income,UMC,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,40.143059165874114
+Upper middle income,UMC,Net migration,SM.POP.NETM,1960,35373.0
+Upper middle income,UMC,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+Upper middle income,UMC,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+Upper middle income,UMC,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,227123069.0
+Upper middle income,UMC,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,237190897.0
+Upper middle income,UMC,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,318108300.0
+Upper middle income,UMC,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,324262320.0
+Upper middle income,UMC,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,25575581.0
+Upper middle income,UMC,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+Upper middle income,UMC,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+Upper middle income,UMC,Rural population,SP.RUR.TOTL,1960,863751423.0
+Upper middle income,UMC,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+Upper middle income,UMC,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+Upper middle income,UMC,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+Upper middle income,UMC,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+Upper middle income,UMC,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+Upper middle income,UMC,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+Upper middle income,UMC,Urban population,SP.URB.TOTL,1960,286509902.0
+Upper middle income,UMC,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
+World,WLD,"Birth rate, crude (per 1,000 people)",SP.DYN.CBRT.IN,1960,31.99925124924358
+World,WLD,"Children in employment, total (% of children ages 7-14)",SL.TLF.0714.ZS,1960,
+World,WLD,"Children out of school, primary",SE.PRM.UNER,1960,
+World,WLD,Current health expenditure (% of GDP),SH.XPD.CHEX.GD.ZS,1960,
+World,WLD,"Death rate, crude (per 1,000 people)",SP.DYN.CDRT.IN,1960,17.211405901356304
+World,WLD,"Employers, total (% of total employment) (modeled ILO estimate)",SL.EMP.MPYR.ZS,1960,
+World,WLD,GDP (current US$),NY.GDP.MKTP.CD,1960,1371947205151.1826
+World,WLD,"Government expenditure on education, total (% of GDP)",SE.XPD.TOTL.GD.ZS,1960,
+World,WLD,"Hospital beds (per 1,000 people)",SH.MED.BEDS.ZS,1960,
+World,WLD,"Inflation, GDP deflator (annual %)",NY.GDP.DEFL.KD.ZG,1960,
+World,WLD,"Labor force, female (% of total labor force)",SL.TLF.TOTL.FE.ZS,1960,
+World,WLD,"Labor force, total",SL.TLF.TOTL.IN,1960,
+World,WLD,"Life expectancy at birth, female (years)",SP.DYN.LE00.FE.IN,1960,53.03005957398093
+World,WLD,"Life expectancy at birth, male (years)",SP.DYN.LE00.MA.IN,1960,49.03300904236384
+World,WLD,Net migration,SM.POP.NETM,1960,0.0
+World,WLD,"Part time employment, total (% of total employment)",SL.TLF.PART.ZS,1960,
+World,WLD,"Physicians (per 1,000 people)",SH.MED.PHYS.ZS,1960,
+World,WLD,"Population ages 0-14, female",SP.POP.0014.FE.IN,1960,553661205.0
+World,WLD,"Population ages 0-14, male",SP.POP.0014.MA.IN,1960,576359231.0
+World,WLD,"Population ages 15-64, female",SP.POP.1564.FE.IN,1960,874298330.0
+World,WLD,"Population ages 15-64, male",SP.POP.1564.MA.IN,1960,867041485.0
+World,WLD,"Population ages 65 and above, female",SP.POP.65UP.FE.IN,1960,85869620.0
+World,WLD,Population density (people per sq. km of land area),EN.POP.DNST,1960,
+World,WLD,Progression to secondary school (%),SE.SEC.PROG.ZS,1960,
+World,WLD,Rural population,SP.RUR.TOTL,1960,2004078180.0
+World,WLD,"School enrollment, preprimary (% gross)",SE.PRE.ENRR,1960,
+World,WLD,"School enrollment, primary (% gross)",SE.PRM.ENRR,1960,
+World,WLD,"School enrollment, secondary (% gross)",SE.SEC.ENRR,1960,
+World,WLD,"School enrollment, tertiary (% gross)",SE.TER.ENRR,1960,
+World,WLD,Tax revenue (% of GDP),GC.TAX.TOTL.GD.ZS,1960,
+World,WLD,"Unemployment, total (% of total labor force) (national estimate)",SL.UEM.TOTL.NE.ZS,1960,
+World,WLD,Urban population,SP.URB.TOTL,1960,1016461960.0
+World,WLD,"Vulnerable employment, total (% of total employment) (modeled ILO estimate)",SL.EMP.VULN.ZS,1960,
