@@ -36,7 +36,7 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 | Population ages 15-64, female                                               | SP.POP.1564.FE.IN | Demography/Population       |            -             |
 | Population ages 15-64, male                                                 | SP.POP.1564.MA.IN | Demography/Population       |            -             |
 | Population ages 65 and above, female                                        | SP.POP.65UP.FE.IN | Demography/Population       |            -             |
-| Population ages 65 and above, male                                          | SP.POP.65UP.MA    | Demography/Population       |            -             |
+| Population ages 65 and above, male                                          | SP.POP.65UP.MA.IN | Demography/Population       |            -             |
 | Population density (people per sq. km of land area)                         | EN.POP.DNST       | Demography                  |       pop_density        |
 | Urban population                                                            | SP.URB.TOTL       | Demography                  |        urban_pop         |
 | Rural population                                                            | SP.RUR.TOTL       | Demography                  |        rural_pop         |
@@ -138,3 +138,24 @@ Todos os filtros foram feitos em python, assim como os sripts para popular o ban
 - [Fernando Rodrigues - 247409](https://github.com/FernandoRST7)
 - [Victor Ogitsu - 244075](https://github.com/pancollenn)
 - [Matheus Veiga - 269494](https://github.com/mvl18)
+
+
+| EN.POP.DNST    |  pop_density  |
+| -------------- | :-----------: |
+| SP.URB.TOTL    |   urban_pop   |
+| SP.RUR.TOTL    |   rural_pop   |
+| SM.POP.NETM    | net_migration |
+| SP.DYN.CDRT.IN |  death_rate   |
+| SP.DYN.CBRT.IN |  birth_rate   |
+
+
+'EN.POP.DNST', 'SP.URB.TOTL', 'SP.RUR.TOTL', 'SM.POP.NETM',
+'SP.DYN.CDRT.IN', 'SP.DYN.CBRT.IN'
+
+
+'EN.POP.DNST': pop_density
+'SP.URB.TOTL': urban_pop
+'SP.RUR.TOTL': rural_pop
+'SM.POP.NETM': net_migration
+'SP.DYN.CDRT.IN': death_rate
+'SP.DYN.CBRT.IN': birth_rate
