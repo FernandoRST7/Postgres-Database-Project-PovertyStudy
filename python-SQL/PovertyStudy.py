@@ -235,12 +235,13 @@ except Exception as e:
 
 # Lê o CSV e separa os dados
 df_poverty = pd.read_csv('processing/poverty_inequality/Poverty_Inequality_filtered.csv')
-df_region_indicators = pd.read_csv('processing/global_indicators/Global_Indicators_regions_filtered.csv')
 df_indicators = pd.read_csv('processing/global_indicators/Global_Indicators_filtered.csv')
 
+df_region = pd.read_csv('processing/poverty_inequality/entities_csv/Region.csv')
+df_country = pd.read_csv('processing/poverty_inequality/entities_csv/Country.csv')
+
+
 # Divide o DataFrame conforme alguma condição ou seleção de colunas
-df_region = df_region_indicators[['region_name', 'region_code']]
-df_country = df_poverty[['region_code', 'country_name', 'country_code']]  # Para a tabela 'Country'
 df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'survey_comparability', 
                 'comparable_spell', 'poverty_line', 'headcount', 'poverty_gap', 
                 'poverty_severity', 'gini', 'reporting_pop', 'reporting_pce', 
@@ -251,10 +252,7 @@ df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'surve
 # Verificar duplicidade e só inserir valores únicos
 df_region.drop_duplicates(subset=['region_code'], inplace=True)  # Remover duplicatas por 'region_code'
 
-with open('Global_Indicators_regions_filtered.csv', 'w') as f:
-    df_region.to_csv(f, index=False)
-
-with open('Global_Indicators_regions_filtered.csv', 'r') as f: # Pode dar erro com duplicatas
+with open('processing/poverty_inequality/entities_csv/Region.csv', 'r') as f: # Pode dar erro com duplicatas
     cursor.copy_expert("""
         COPY public."Region" (region_name, region_code)
         FROM STDIN
@@ -263,12 +261,8 @@ with open('Global_Indicators_regions_filtered.csv', 'r') as f: # Pode dar erro c
 
 # Passo 2: Carregar dados na tabela 'Country'
 # Verificar duplicidade e só inserir valores únicos
-df_country.drop_duplicates(subset=['country_code'], inplace=True)  # Remover duplicatas por 'country_code'
 
-with open('Poverty_Inequality_filtered_country.csv', 'w') as f1:
-    df_country.to_csv(f1, index=False)
-
-with open('Poverty_Inequality_filtered_country.csv', 'r') as f1: # Pode dar erro com duplicatas
+with open('processing/poverty_inequality/entities_csv/Country.csv', 'r') as f1: # Pode dar erro com duplicatas
     cursor.copy_expert("""
         COPY public."Country" (region_code, country_name, country_code)
         FROM STDIN

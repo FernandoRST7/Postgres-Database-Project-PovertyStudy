@@ -10,7 +10,7 @@ df['reporting_pop'] = df['reporting_pop'].astype(int)
 df['survey_year'] = df['survey_year'].astype(int)
 
 # Excluindo colunas específicas
-colunas_para_excluir = ['watts', 'region_name', 'mld', 'polarization', 'cpi', 'ppp', 'reporting_gdp',
+colunas_para_excluir = ['watts', 'mld', 'polarization', 'cpi', 'ppp', 'reporting_gdp',
                          'is_interpolated', 'estimation_type','pg', 'spr', 'estimate_type']
 
 df_filtrado = df.drop(columns=colunas_para_excluir)
