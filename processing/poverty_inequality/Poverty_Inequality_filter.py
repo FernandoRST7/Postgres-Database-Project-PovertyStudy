@@ -19,4 +19,4 @@ df_filtrado = df.drop(columns=colunas_para_excluir)
 print(df_filtrado)
 
 # Se quiser salvar:
-df_filtrado.to_csv('processing/poverty_inequality/Poverty_Inequality_filtrado.csv', index=False)
+df_filtrado.to_csv('processing/poverty_inequality/Poverty_Inequality_filtered.csv', index=False)

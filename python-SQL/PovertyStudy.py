@@ -256,7 +256,7 @@ with open('Global_Indicators_regions_filtered.csv', 'w') as f:
 
 with open('Global_Indicators_regions_filtered.csv', 'r') as f: # Pode dar erro com duplicatas
     cursor.copy_expert("""
-        COPY public."Region" (region_code, region_name)
+        COPY public."Region" (region_name, region_code)
         FROM STDIN
         WITH (FORMAT csv, HEADER true, DELIMITER ',');
     """, f)
