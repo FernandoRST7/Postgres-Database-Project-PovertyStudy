@@ -23,7 +23,8 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 
 - Desenvolvemos o diagrama entidade-relacionamento (DER) representando as principais entidades (como País, Indicador, Pobreza, Educação, Saúde, etc.) e seus relacionamentos.
 - Para isso filtramos os datasets escolhidos pelo código identificador dos indicadores, separando cada um deles em entidades. Além disso atribuimos nomes melhores para cada indicador, a fim de facilitar a consulta SQL.
-- Abaixo temos os indicadores escolhidos de cada dataset separado em suas entidades. Vale lembrar que a tabela abaixo tem apenas a parte dos indicadores, sendo que dada informação dessa possui seu país/região e ano de origem da pesquisa.
+- Abaixo temos os indicadores escolhidos de cada dataset separado em suas entidades. Vale lembrar que a tabela abaixo tem apenas a parte dos indicadores, sendo que cada informação dessa possui seu país/região e ano de origem da pesquisa.
+- Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para separar dados em tabelas menores para reduzir redundância e dependências indesejadas. Portanto, nossa estruturação utiliza a 1FN (Primeira Forma Normal) e 3FN (Terceira Forma Normal)
 
 #### [Global Indicators](https://github.com/FernandoRST7/Postgres-Database-Project-PovertyStudy/blob/main/processing/global_indicators/Global_Indicators_filtered.csv)
 
@@ -72,8 +73,6 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 | GDP (current US$)                                                           | NY.GDP.MKTP.CD    | Economy                     |           gdp            |
 | Inflation, GDP deflator (annual %)                                          | NY.GDP.DEFL.KD.ZG | Economy                     |        inflation         |
 | Tax revenue (% of GDP)                                                      | GC.TAX.TOTL.GD.ZS | Economy                     |       tax_revenue        |
-Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para separar dados em tabelas menores para reduzir redundância e dependências indesejadas. Portanto, nossa estruturação utiliza a **1FN (Primeira Forma Normal)** e **3FN (Terceira Forma Normal)**.
-
 #### [Poverty_Inequality](https://github.com/FernandoRST7/Postgres-Database-Project-PovertyStudy/blob/main/processing/poverty_inequality/Poverty_Inequality_filtered.csv)
 
 | Description                                                        | Field             |
@@ -104,27 +103,35 @@ Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para se
 
 ### 2. Modelo Relacional
 
-A transformação do modelo conceitual para o modelo relacional, especificando tabelas, atributos, chaves primárias e estrangeiras.
+- Foi feita a transformação do modelo conceitual para o modelo relacional, especificando tabelas, atributos, chaves primárias e estrangeiras.
+- Desta forma foi possível conseguir 
 
 ![Relational_model](models/Relational_model.png)
 
 ### 3. Modelo Físico
+
+A partir do modelo relacional feito no ERD do pgAdmin, foi gerado o modelo físico do banco de dados, pronto para ser executado em um servidor PostgreSQL.
 
 O script de criação (DDL) do banco de dados foi escrito em SQL padrão e inclui:
 - Criação de tabelas
 - Definição de chaves primárias e estrangeiras
 - Restrições de integridade
 
-### 4. Consultas SQL
+Este modelo pode ser encontrado [aqui](models/Physical_model.sql).
+
+### 4. Popular Banco de Dados
+
+
+### 5. Consultas SQL
 
 Elaboramos pelo menos 5 consultas SQL não triviais, que:
 - Integram dados de mais de uma tabela
 - Fazem uso de agrupamentos (`GROUP BY`), ordenações (`ORDER BY`) e operações de junção (`JOIN`)
   
 
-### 5. Implementação em Python
+### 6. Implementação em Python
 
-A implementação foi feita utilizando a biblioteca `sqlite3` para a conexão com o banco de dados e manipulação das operações.
+Todos os filtros foram feitos em python, assim como os sripts para popular o banco de dados e realizar as consultas SQL, para ficar melhor a visualização, colocamos tudo no aquivo `.ipynb`.
 
 ## Autores
 
