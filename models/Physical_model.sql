@@ -3,7 +3,7 @@
 BEGIN;
 
 
-CREATE TABLE IF NOT EXISTS public."Country"
+CREATE TABLE IF NOT EXISTS public.country
 (
     country_code character varying NOT NULL,
     country_name character varying,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS public."Country"
     PRIMARY KEY (country_code)
 );
 
-CREATE TABLE IF NOT EXISTS public."Survey"
+CREATE TABLE IF NOT EXISTS public.survey
 (
     id_survey serial NOT NULL,
     country_code character varying NOT NULL,
@@ -29,17 +29,19 @@ CREATE TABLE IF NOT EXISTS public."Survey"
     distribution_type character varying,
     spl double precision,
     survey_year integer,
+    survey_coverage character varying,
+    reporting_level character varying,
     PRIMARY KEY (id_survey)
 );
 
-CREATE TABLE IF NOT EXISTS public."Region"
+CREATE TABLE IF NOT EXISTS public.region
 (
     region_code character varying NOT NULL,
     region_name character varying NOT NULL,
     PRIMARY KEY (region_code)
 );
 
-CREATE TABLE IF NOT EXISTS public."Decile"
+CREATE TABLE IF NOT EXISTS public.decile
 (
     id_decile serial NOT NULL,
     value double precision,
@@ -48,7 +50,7 @@ CREATE TABLE IF NOT EXISTS public."Decile"
     PRIMARY KEY (id_decile)
 );
 
-CREATE TABLE IF NOT EXISTS public."Demography"
+CREATE TABLE IF NOT EXISTS public.demography
 (
     id_demography serial NOT NULL,
     year integer,
@@ -62,7 +64,7 @@ CREATE TABLE IF NOT EXISTS public."Demography"
     PRIMARY KEY (id_demography)
 );
 
-CREATE TABLE IF NOT EXISTS public."Employment"
+CREATE TABLE IF NOT EXISTS public.employment
 (
     id_employment serial NOT NULL,
     year integer,
@@ -77,7 +79,7 @@ CREATE TABLE IF NOT EXISTS public."Employment"
     PRIMARY KEY (id_employment)
 );
 
-CREATE TABLE IF NOT EXISTS public."Education"
+CREATE TABLE IF NOT EXISTS public.education
 (
     id_education serial NOT NULL,
     year integer,
@@ -92,7 +94,7 @@ CREATE TABLE IF NOT EXISTS public."Education"
     PRIMARY KEY (id_education)
 );
 
-CREATE TABLE IF NOT EXISTS public."Economy"
+CREATE TABLE IF NOT EXISTS public.economy
 (
     id_economy serial NOT NULL,
     year integer,
@@ -103,7 +105,7 @@ CREATE TABLE IF NOT EXISTS public."Economy"
     PRIMARY KEY (id_economy)
 );
 
-CREATE TABLE IF NOT EXISTS public."Population"
+CREATE TABLE IF NOT EXISTS public.population
 (
     id_population serial NOT NULL,
     id_demography integer NOT NULL,
@@ -113,7 +115,7 @@ CREATE TABLE IF NOT EXISTS public."Population"
     PRIMARY KEY (id_population)
 );
 
-CREATE TABLE IF NOT EXISTS public."Life Expectancy"
+CREATE TABLE IF NOT EXISTS public.life_expectancy
 (
     id_life_expectancy serial NOT NULL,
     id_demography integer NOT NULL,
@@ -122,7 +124,7 @@ CREATE TABLE IF NOT EXISTS public."Life Expectancy"
     PRIMARY KEY (id_life_expectancy)
 );
 
-CREATE TABLE IF NOT EXISTS public."Health"
+CREATE TABLE IF NOT EXISTS public.health
 (
     id_health serial NOT NULL,
     country_code character varying NOT NULL,
@@ -133,81 +135,81 @@ CREATE TABLE IF NOT EXISTS public."Health"
     PRIMARY KEY (id_health)
 );
 
-ALTER TABLE IF EXISTS public."Country"
+ALTER TABLE IF EXISTS public.country
     ADD FOREIGN KEY (region_code)
-    REFERENCES public."Region" (region_code) MATCH SIMPLE
+    REFERENCES public.region (region_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Survey"
+ALTER TABLE IF EXISTS public.survey
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Decile"
+ALTER TABLE IF EXISTS public.decile
     ADD FOREIGN KEY (id_survey)
-    REFERENCES public."Survey" (id_survey) MATCH SIMPLE
+    REFERENCES public.survey (id_survey) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Demography"
+ALTER TABLE IF EXISTS public.demography
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Employment"
+ALTER TABLE IF EXISTS public.employment
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Education"
+ALTER TABLE IF EXISTS public.education
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Economy"
+ALTER TABLE IF EXISTS public.economy
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Population"
+ALTER TABLE IF EXISTS public.population
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Life Expectancy"
+ALTER TABLE IF EXISTS public.life_expectancy
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Health"
+ALTER TABLE IF EXISTS public.health
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
