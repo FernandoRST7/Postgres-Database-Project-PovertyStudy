@@ -16,7 +16,23 @@ cursor = conn.cursor()
 # Cria tabela no db
 try:
     cursor.execute("""
-CREATE TABLE IF NOT EXISTS public."Country"
+                
+-- Drop existing tables if they exist (optional, for clean runs)
+-- Use with caution, this will delete all data!
+DROP TABLE IF EXISTS COUNTRY CASCADE;
+DROP TABLE IF EXISTS SURVEY CASCADE;
+DROP TABLE IF EXISTS REGION CASCADE; -- Typo matches schema
+DROP TABLE IF EXISTS DEMOGRAPHY CASCADE;
+DROP TABLE IF EXISTS HEALTH CASCADE;
+DROP TABLE IF EXISTS EDUCATION CASCADE;
+DROP TABLE IF EXISTS ECONOMY CASCADE;
+DROP TABLE IF EXISTS POPULATION CASCADE;
+DROP TABLE IF EXISTS EMPLOYMENT CASCADE;
+DROP TABLE IF EXISTS LIFE_EXPECTANCY CASCADE;
+DROP TABLE IF EXISTS DECILE CASCADE;
+
+
+CREATE TABLE IF NOT EXISTS public.country
 (
     country_code character varying NOT NULL,
     country_name character varying,
@@ -24,7 +40,7 @@ CREATE TABLE IF NOT EXISTS public."Country"
     PRIMARY KEY (country_code)
 );
 
-CREATE TABLE IF NOT EXISTS public."Survey"
+CREATE TABLE IF NOT EXISTS public.survey
 (
     id_survey serial NOT NULL,
     country_code character varying NOT NULL,
@@ -42,17 +58,19 @@ CREATE TABLE IF NOT EXISTS public."Survey"
     distribution_type character varying,
     spl double precision,
     survey_year integer,
+    survey_coverage character varying,
+    reporting_level character varying,
     PRIMARY KEY (id_survey)
 );
 
-CREATE TABLE IF NOT EXISTS public."Region"
+CREATE TABLE IF NOT EXISTS public.region
 (
     region_code character varying NOT NULL,
     region_name character varying NOT NULL,
     PRIMARY KEY (region_code)
 );
 
-CREATE TABLE IF NOT EXISTS public."Decile"
+CREATE TABLE IF NOT EXISTS public.decile
 (
     id_decile serial NOT NULL,
     value double precision,
@@ -61,7 +79,7 @@ CREATE TABLE IF NOT EXISTS public."Decile"
     PRIMARY KEY (id_decile)
 );
 
-CREATE TABLE IF NOT EXISTS public."Demography"
+CREATE TABLE IF NOT EXISTS public.demography
 (
     id_demography serial NOT NULL,
     year integer,
@@ -75,7 +93,7 @@ CREATE TABLE IF NOT EXISTS public."Demography"
     PRIMARY KEY (id_demography)
 );
 
-CREATE TABLE IF NOT EXISTS public."Employment"
+CREATE TABLE IF NOT EXISTS public.employment
 (
     id_employment serial NOT NULL,
     year integer,
@@ -90,7 +108,7 @@ CREATE TABLE IF NOT EXISTS public."Employment"
     PRIMARY KEY (id_employment)
 );
 
-CREATE TABLE IF NOT EXISTS public."Education"
+CREATE TABLE IF NOT EXISTS public.education
 (
     id_education serial NOT NULL,
     year integer,
@@ -105,7 +123,7 @@ CREATE TABLE IF NOT EXISTS public."Education"
     PRIMARY KEY (id_education)
 );
 
-CREATE TABLE IF NOT EXISTS public."Economy"
+CREATE TABLE IF NOT EXISTS public.economy
 (
     id_economy serial NOT NULL,
     year integer,
@@ -116,7 +134,7 @@ CREATE TABLE IF NOT EXISTS public."Economy"
     PRIMARY KEY (id_economy)
 );
 
-CREATE TABLE IF NOT EXISTS public."Population"
+CREATE TABLE IF NOT EXISTS public.population
 (
     id_population serial NOT NULL,
     id_demography integer NOT NULL,
@@ -126,7 +144,7 @@ CREATE TABLE IF NOT EXISTS public."Population"
     PRIMARY KEY (id_population)
 );
 
-CREATE TABLE IF NOT EXISTS public."Life Expectancy"
+CREATE TABLE IF NOT EXISTS public.life_expectancy
 (
     id_life_expectancy serial NOT NULL,
     id_demography integer NOT NULL,
@@ -135,7 +153,7 @@ CREATE TABLE IF NOT EXISTS public."Life Expectancy"
     PRIMARY KEY (id_life_expectancy)
 );
 
-CREATE TABLE IF NOT EXISTS public."Health"
+CREATE TABLE IF NOT EXISTS public.health
 (
     id_health serial NOT NULL,
     country_code character varying NOT NULL,
@@ -146,81 +164,81 @@ CREATE TABLE IF NOT EXISTS public."Health"
     PRIMARY KEY (id_health)
 );
 
-ALTER TABLE IF EXISTS public."Country"
+ALTER TABLE IF EXISTS public.country
     ADD FOREIGN KEY (region_code)
-    REFERENCES public."Region" (region_code) MATCH SIMPLE
+    REFERENCES public.region (region_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Survey"
+ALTER TABLE IF EXISTS public.survey
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Decile"
+ALTER TABLE IF EXISTS public.decile
     ADD FOREIGN KEY (id_survey)
-    REFERENCES public."Survey" (id_survey) MATCH SIMPLE
+    REFERENCES public.survey (id_survey) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Demography"
+ALTER TABLE IF EXISTS public.demography
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Employment"
+ALTER TABLE IF EXISTS public.employment
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Education"
+ALTER TABLE IF EXISTS public.education
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Economy"
+ALTER TABLE IF EXISTS public.economy
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Population"
+ALTER TABLE IF EXISTS public.population
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Life Expectancy"
+ALTER TABLE IF EXISTS public.life_expectancy
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Health"
+ALTER TABLE IF EXISTS public.health
     ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+    REFERENCES public.country (country_code) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
@@ -231,56 +249,169 @@ ALTER TABLE IF EXISTS public."Health"
 
 except Exception as e:
     conn.rollback()
-    print(f"Erro: {e}")    
+    print(f"Erro: {e}") 
+
+cursor.execute("SET session_replication_role = 'origin';")
+conn.commit()
 
 # Lê o CSV e separa os dados
-df_poverty = pd.read_csv('processing/poverty_inequality/Poverty_Inequality_filtered.csv')
-df_indicators = pd.read_csv('processing/global_indicators/Global_Indicators_filtered.csv')
+df_poverty = pd.read_csv('processing\poverty_inequality\Poverty_Inequality_filtered.csv')
+df_indicators = pd.read_csv('processing\global_indicators\Global_Indicators_filtered.csv')
 
-df_region = pd.read_csv('processing/poverty_inequality/entities_csv/Region.csv')
-df_country = pd.read_csv('processing/poverty_inequality/entities_csv/Country.csv')
+df_region = pd.read_csv('processing\poverty_inequality\entities_csv\Region.csv')
+df_country = pd.read_csv('processing\poverty_inequality\entities_csv\Country.csv')
 
 
-# Divide o DataFrame conforme alguma condição ou seleção de colunas
 df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'survey_comparability', 
                 'comparable_spell', 'poverty_line', 'headcount', 'poverty_gap', 
                 'poverty_severity', 'gini', 'reporting_pop', 'reporting_pce', 
                 'distribution_type', 'spl', 'survey_year']]  # Para a tabela 'Survey'
 
-
 # Passo 1: Carregar dados na tabela 'Region'
+
 # Verificar duplicidade e só inserir valores únicos
 df_region.drop_duplicates(subset=['region_code'], inplace=True)  # Remover duplicatas por 'region_code'
 
-with open('processing/poverty_inequality/entities_csv/Region.csv', 'r') as f: # Pode dar erro com duplicatas
+
+with open('processing\poverty_inequality\entities_csv\Region.csv', 'r') as f:
     cursor.copy_expert("""
-        COPY public."Region" (region_name, region_code)
+        COPY REGION (region_code, region_name)
         FROM STDIN
         WITH (FORMAT csv, HEADER true, DELIMITER ',');
     """, f)
+conn.commit()
+print("Tabela Region populada com sucesso!")
+
+'''
+# 7. Testar a consulta CORRETAMENTE (usando aspas)
+cursor.execute('SELECT * FROM REGION')
+rows = cursor.fetchall()
+print(f"\nTotal de registros: {len(rows)}")
+for row in rows:
+    print(row)
+'''
+
 
 # Passo 2: Carregar dados na tabela 'Country'
-# Verificar duplicidade e só inserir valores únicos
 
-with open('processing/poverty_inequality/entities_csv/Country.csv', 'r') as f1: # Pode dar erro com duplicatas
+with open('processing\poverty_inequality\entities_csv\Country.csv', 'r') as f1: # Pode dar erro com duplicatas
     cursor.copy_expert("""
-        COPY public."Country" (region_code, country_name, country_code)
+        COPY COUNTRY (region_code, country_name, country_code)
         FROM STDIN
         WITH (FORMAT csv, HEADER true, DELIMITER ',');
     """, f1)
+conn.commit()
+print("Tabela Country populada com sucesso!")
+
+'''
+# 7. Testar a consulta CORRETAMENTE (usando aspas)
+cursor.execute('SELECT * FROM COUNTRY')
+rows = cursor.fetchall()
+print(f"\nTotal de registros: {len(rows)}")
+for row in rows:
+    print(row)
+'''
 
 # Passo 3: Carregar dados na tabela 'Survey'
-with open('Poverty_Inequality_filtered_survey.csv', 'w') as f2:
-    df_survey.to_csv(f2, index=False)
-
-with open('Poverty_Inequality_filtered_survey.csv', 'r') as f2:
+with open('processing\poverty_inequality\entities_csv\Survey.csv', 'r') as f2:
     cursor.copy_expert("""
-        COPY public."Survey" (country_code, welfare_type, survey_acronym, survey_comparability, 
+        COPY SURVEY(country_code, welfare_type, survey_acronym, survey_comparability, 
                                comparable_spell, poverty_line, headcount, poverty_gap, poverty_severity, 
-                               gini, reporting_pop, reporting_pce, distribution_type, spl, survey_year)
+                               gini, reporting_pop, reporting_pce, distribution_type, spl, survey_year, survey_coverage, reporting_level)
         FROM STDIN
         WITH (FORMAT csv, HEADER true, DELIMITER ',')
     """, f2)
+conn.commit()
+print("Tabela Survey populada com sucesso!")
+
+"""
+# 7. Testar a consulta CORRETAMENTE (usando aspas)
+cursor.execute('''SELECT * FROM SURVEY''')
+rows = cursor.fetchall()
+print(f"\nTotal de registros: {len(rows)}")
+for row in rows:
+    print(row)
+"""
+
+# Criar uma tabela temporária no banco de dados
+cursor.execute("""
+    CREATE TEMP TABLE temp_decile (
+        country_code VARCHAR,
+        survey_year INTEGER,
+        survey_acronym VARCHAR,
+        survey_coverage VARCHAR,
+        reporting_level VARCHAR,
+        name VARCHAR,
+        value DOUBLE PRECISION
+    );
+""")
+conn.commit()
+
+# Passo 4: Carregar dados na tabela 'Decile'
+# Carregar o CSV de Decile
+df_decile = pd.read_csv("processing\poverty_inequality\entities_csv\Decile.csv")
+ 
+# Inserir os dados do DataFrame na tabela temporária
+for _, row in df_decile.iterrows():
+    cursor.execute("""
+        INSERT INTO temp_decile (country_code, survey_year, survey_acronym, survey_coverage, reporting_level, name, value)
+        VALUES (%s, %s, %s, %s, %s, %s, %s);
+    """, (row['country_code'], row['survey_year'], row['survey_acronym'], 
+          row['survey_coverage'], row['reporting_level'], row['name'], row['value']))
+conn.commit()
+
+# Inserir os dados na tabela DECILE
+cursor.execute("""
+    INSERT INTO DECILE (name, value, id_survey)
+    SELECT
+        t.name,
+        t.value,
+        s.id_survey
+    FROM
+        temp_decile t
+    INNER JOIN
+        SURVEY s
+    ON
+        t.country_code = s.country_code AND 
+        t.survey_year = s.survey_year AND 
+        t.survey_acronym = s.survey_acronym AND
+        t.survey_coverage = s.survey_coverage AND 
+        t.reporting_level = s.reporting_level;
+""")
+conn.commit()
+
+# Remover a tabela temporária
+cursor.execute("DROP TABLE temp_decile;")
+conn.commit()
+print("Tabela Decile populada com sucesso!")
+
+# Passo 5: Carregar dados na tabela ECONOMY
+with open('processing\global_indicators\entities_csv\Economy.csv', 'r') as f2:
+    cursor.copy_expert("""
+        COPY ECONOMY(year, country_code, tax_revenue, inflation, gdp)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',')
+    """, f2)
+conn.commit()
+print("Tabela Economy populada com sucesso!")
+
+"""
+# 7. Testar a consulta CORRETAMENTE (usando aspas)
+cursor.execute('''SELECT * FROM ECONOMY''')
+rows = cursor.fetchall()
+print(f"\nTotal de registros: {len(rows)}")
+for row in rows:
+    print(row)
+"""
+
+
+# teste
+cursor.execute("""
+    SELECT * FROM REGION
+""")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
 
 # Commit das inserções
 conn.commit()
