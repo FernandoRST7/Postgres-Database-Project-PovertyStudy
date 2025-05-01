@@ -36,7 +36,7 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 | Population ages 15-64, female                                               | SP.POP.1564.FE.IN | Demography/Population       |            -             |
 | Population ages 15-64, male                                                 | SP.POP.1564.MA.IN | Demography/Population       |            -             |
 | Population ages 65 and above, female                                        | SP.POP.65UP.FE.IN | Demography/Population       |            -             |
-| Population ages 65 and above, male                                          | SP.POP.65UP.MA    | Demography/Population       |            -             |
+| Population ages 65 and above, male                                          | SP.POP.65UP.MA.IN | Demography/Population       |            -             |
 | Population density (people per sq. km of land area)                         | EN.POP.DNST       | Demography                  |       pop_density        |
 | Urban population                                                            | SP.URB.TOTL       | Demography                  |        urban_pop         |
 | Rural population                                                            | SP.RUR.TOTL       | Demography                  |        rural_pop         |
