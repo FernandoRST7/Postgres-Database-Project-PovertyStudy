@@ -267,8 +267,8 @@ df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'surve
                 'poverty_severity', 'gini', 'reporting_pop', 'reporting_pce', 
                 'distribution_type', 'spl', 'survey_year']]  # Para a tabela 'Survey'
 
-# Passo 1: Carregar dados na tabela 'Region'
 
+# Passo 1: Carregar dados na tabela REGION
 # Verificar duplicidade e só inserir valores únicos
 df_region.drop_duplicates(subset=['region_code'], inplace=True)  # Remover duplicatas por 'region_code'
 
@@ -282,18 +282,8 @@ with open('processing\poverty_inequality\entities_csv\Region.csv', 'r') as f:
 conn.commit()
 print("Tabela Region populada com sucesso!")
 
-'''
-# 7. Testar a consulta CORRETAMENTE (usando aspas)
-cursor.execute('SELECT * FROM REGION')
-rows = cursor.fetchall()
-print(f"\nTotal de registros: {len(rows)}")
-for row in rows:
-    print(row)
-'''
 
-
-# Passo 2: Carregar dados na tabela 'Country'
-
+# Passo 2: Carregar dados na tabela COUNTRY
 with open('processing\poverty_inequality\entities_csv\Country.csv', 'r') as f1: # Pode dar erro com duplicatas
     cursor.copy_expert("""
         COPY COUNTRY (region_code, country_name, country_code)
@@ -303,16 +293,8 @@ with open('processing\poverty_inequality\entities_csv\Country.csv', 'r') as f1: 
 conn.commit()
 print("Tabela Country populada com sucesso!")
 
-'''
-# 7. Testar a consulta CORRETAMENTE (usando aspas)
-cursor.execute('SELECT * FROM COUNTRY')
-rows = cursor.fetchall()
-print(f"\nTotal de registros: {len(rows)}")
-for row in rows:
-    print(row)
-'''
 
-# Passo 3: Carregar dados na tabela 'Survey'
+# Passo 3: Carregar dados na tabela SURVEY
 with open('processing\poverty_inequality\entities_csv\Survey.csv', 'r') as f2:
     cursor.copy_expert("""
         COPY SURVEY(country_code, welfare_type, survey_acronym, survey_comparability, 
@@ -324,15 +306,8 @@ with open('processing\poverty_inequality\entities_csv\Survey.csv', 'r') as f2:
 conn.commit()
 print("Tabela Survey populada com sucesso!")
 
-"""
-# 7. Testar a consulta CORRETAMENTE (usando aspas)
-cursor.execute('''SELECT * FROM SURVEY''')
-rows = cursor.fetchall()
-print(f"\nTotal de registros: {len(rows)}")
-for row in rows:
-    print(row)
-"""
 
+# Passo 4: Carregar dados na tabela DECILE
 # Criar uma tabela temporária no banco de dados
 cursor.execute("""
     CREATE TEMP TABLE temp_decile (
@@ -347,7 +322,6 @@ cursor.execute("""
 """)
 conn.commit()
 
-# Passo 4: Carregar dados na tabela 'Decile'
 # Carregar o CSV de Decile
 df_decile = pd.read_csv("processing\poverty_inequality\entities_csv\Decile.csv")
  
@@ -385,6 +359,7 @@ cursor.execute("DROP TABLE temp_decile;")
 conn.commit()
 print("Tabela Decile populada com sucesso!")
 
+
 # Passo 5: Carregar dados na tabela ECONOMY
 with open('processing\global_indicators\entities_csv\Economy.csv', 'r') as f2:
     cursor.copy_expert("""
@@ -395,25 +370,145 @@ with open('processing\global_indicators\entities_csv\Economy.csv', 'r') as f2:
 conn.commit()
 print("Tabela Economy populada com sucesso!")
 
-"""
-# 7. Testar a consulta CORRETAMENTE (usando aspas)
-cursor.execute('''SELECT * FROM ECONOMY''')
-rows = cursor.fetchall()
-print(f"\nTotal de registros: {len(rows)}")
-for row in rows:
-    print(row)
-"""
+
+# Passo 6: Carregar dados na tabela EMPLOYMENT
+with open('processing\global_indicators\entities_csv\Employment.csv', 'r') as f2:
+    cursor.copy_expert("""
+        COPY EMPLOYMENT(year, country_code, child_emp, unemp, vulnerable_emp, part_time, employers, labor_force_total, labor_force_fem)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',')
+    """, f2)
+conn.commit()
+print("Tabela Employment populada com sucesso!")
 
 
-# teste
+# passo 7: Carregar dados na tabela EDUCATION
+with open('processing\global_indicators\entities_csv\Education.csv', 'r') as f2:
+    cursor.copy_expert("""
+        COPY EDUCATION(year, country_code, child_out_of_school, progression_to_sec, expenditure, preprim_enroll, prim_enrol, sec_enrol, terti_enrol)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',')
+    """, f2)
+conn.commit()
+print("Tabela Education populada com sucesso!")
+
+
+# Passo 8: Carregar dados na tabela HEALTH
+with open('processing\global_indicators\entities_csv\Health.csv', 'r') as f2:
+    cursor.copy_expert("""
+        COPY HEALTH(year, country_code, hospital_beds, physicians, expenditure)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',')
+    """, f2)
+conn.commit()
+print("Tabela Health populada com sucesso!")
+
+
+# Passo 9: Carregar dados na tabela DEMOGRAPHY
+with open('processing\global_indicators\entities_csv\Demography.csv', 'r') as f2:
+    cursor.copy_expert("""
+        COPY DEMOGRAPHY(year, country_code, pop_density, urban_pop, rural_pop, net_migration, death_rate, birth_rate)
+        FROM STDIN
+        WITH (FORMAT csv, HEADER true, DELIMITER ',')
+    """, f2)
+conn.commit()
+print("Tabela Demography populada com sucesso!")
+
+
+# Psso 10: Carregar dados na tabela POPULATION (similar ao de decile\Passo 4)
+# Criar uma tabela temporária no banco de dados
 cursor.execute("""
-    SELECT * FROM REGION
+    CREATE TEMP TABLE temp_population (
+        year INTEGER,
+        country_code VARCHAR,
+        pop_ages VARCHAR,
+        gender VARCHAR,
+        number DOUBLE PRECISION
+    );
 """)
-rows = cursor.fetchall()
-for row in rows:
-    print(row)
+conn.commit()
 
-# Commit das inserções
+# Carregar o CSV de Population
+df_population = pd.read_csv("processing\global_indicators\entities_csv\Population.csv")
+
+# Inserir os dados do DataFrame na tabela temporária
+for _, row in df_population.iterrows():
+    cursor.execute("""
+        INSERT INTO temp_population (year, country_code, pop_ages, gender, number)
+        VALUES (%s, %s, %s, %s, %s);
+    """, (row['year'], row['country_code'], row['pop_ages'], row['gender'], row['number']))
+conn.commit()
+
+# Inserir os dados na tabela Population com id_demography
+cursor.execute("""
+    INSERT INTO POPULATION (id_demography, pop_ages, gender, number)
+    SELECT
+        d.id_demography,
+        t.pop_ages,
+        t.gender,
+        t.number
+    FROM
+        temp_population t
+    INNER JOIN
+        DEMOGRAPHY d
+    ON
+        t.year = d.year AND t.country_code = d.country_code;
+""")
+conn.commit()
+
+# Remover a tabela temporária
+cursor.execute("DROP TABLE temp_population;")
+conn.commit()
+
+print("Tabela Population populada com sucesso!")
+
+
+# Passo 11: Carregar dados na tabela LIFE_EXPECTANCY
+# Criar uma tabela temporária no banco de dados
+cursor.execute("""
+    CREATE TEMP TABLE temp_life_expectancy (
+        year INTEGER,
+        country_code VARCHAR,
+        gender VARCHAR,
+        value DOUBLE PRECISION
+    );
+""")
+conn.commit()
+
+# Carregar o CSV de Life Expectancy
+df_life_expectancy = pd.read_csv("processing\global_indicators\entities_csv\Life_expectancy.csv")
+
+# Inserir os dados do DataFrame na tabela temporária
+for _, row in df_life_expectancy.iterrows():
+    cursor.execute("""
+        INSERT INTO temp_life_expectancy (year, country_code, gender, value)
+        VALUES (%s, %s, %s, %s);
+    """, (row['year'], row['country_code'], row['gender'], row['value']))
+conn.commit()
+
+# Inserir os dados na tabela LIFE_EXPECTANCY com id_demography
+cursor.execute("""
+    INSERT INTO LIFE_EXPECTANCY (id_demography, gender, value)
+    SELECT
+        d.id_demography,
+        t.gender,
+        t.value
+    FROM
+        temp_life_expectancy t
+    INNER JOIN
+        DEMOGRAPHY d
+    ON
+        t.year = d.year AND t.country_code = d.country_code;
+""")
+conn.commit()
+
+# Remover a tabela temporária
+cursor.execute("DROP TABLE temp_life_expectancy;")
+conn.commit()
+
+print("Tabela Life Expectancy populada com sucesso!")
+
+# Commit FINAL das inserções
 conn.commit()
 
 # Fechar a conexão
