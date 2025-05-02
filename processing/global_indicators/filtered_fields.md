@@ -6,7 +6,7 @@
 | Population ages 15-64, female                                               | SP.POP.1564.FE.IN |                      |
 | Population ages 15-64, male                                                 | SP.POP.1564.MA.IN |                      |
 | Population ages 65 and above, female                                        | SP.POP.65UP.FE.IN |                      |
-| Population ages 65 and above, male                                          | SP.POP.65UP.MA    |                      |
+| Population ages 65 and above, male                                          | SP.POP.65UP.MA.IN |                      |
 | Population density (people per sq. km of land area)                         | EN.POP.DNST       |                      |
 | Urban population                                                            | SP.URB.TOTL       |                      |
 | Rural population                                                            | SP.RUR.TOTL       |                      |
