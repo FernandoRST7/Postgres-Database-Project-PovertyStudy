@@ -128,120 +128,129 @@ Para popular o banco de dados, criamos várias tabelas, uma para cada entidade d
 Elaboramos as seguintes consultas SQL avançadas, que integram dados de várias tabelas, utilizam agrupamentos, ordenações, operações de junção e funções analíticas para explorar correlações significativas entre os dados:
 
 #### 1. Análise de Desemprego, Desigualdade e Educação por País
-Consulta que relaciona a taxa de desemprego, o coeficiente de Gini e a taxa de matrícula no ensino secundário para avaliar como a educação pode influenciar a desigualdade e o desemprego em diferentes países.
+Consulta que relaciona as médias de taxa de desemprego, o coeficiente de Gini e a taxa de matrícula no ensino secundário para avaliar como a educação pode influenciar a desigualdade e o desemprego em diferentes países.
 ```sql
 SELECT 
     c.country_name,
-    e.unemp AS unemployment_rate,
-    p.gini AS gini_coefficient,
-    ed.sec_enrol AS secondary_enrollment_rate,
+    ROUND(AVG(e.unemp)::numeric, 2) AS avg_unemployment_rate,
+    ROUND(AVG(s.gini)::numeric, 2) AS avg_gini_coefficient,
+    ROUND(AVG(ed.sec_enrol)::numeric, 2) AS avg_secondary_enrollment_rate,
     CASE 
-        WHEN ed.sec_enrol > 80 THEN 'High Enrollment'
-        WHEN ed.sec_enrol BETWEEN 50 AND 80 THEN 'Moderate Enrollment'
+        WHEN AVG(ed.sec_enrol) > 80 THEN 'High Enrollment'
+        WHEN AVG(ed.sec_enrol) BETWEEN 50 AND 80 THEN 'Moderate Enrollment'
         ELSE 'Low Enrollment'
-    END AS enrollment_category,
-    RANK() OVER (PARTITION BY c.region ORDER BY p.gini DESC) AS inequality_rank
+    END AS enrollment_category
 FROM 
-    Employment e
+    employment e
 JOIN 
-    Country c ON e.country_id = c.country_id
+    country c ON e.country_code = c.country_code
 JOIN 
-    Poverty p ON c.country_id = p.country_id
+    survey s ON c.country_code = s.country_code
 JOIN 
-    Education ed ON c.country_id = ed.country_id AND e.year = ed.year AND p.year = ed.year
+    education ed ON c.country_code = ed.country_code AND e.year = ed.year
 WHERE 
-    e.year = p.year
+    e.year = s.survey_year
     AND ed.sec_enrol IS NOT NULL
-    AND p.gini IS NOT NULL
+    AND s.gini IS NOT NULL
+GROUP BY 
+    c.country_name
 ORDER BY 
-    inequality_rank, unemployment_rate DESC, secondary_enrollment_rate DESC;
+    c.country_name;
 ```
 
 #### 2. Expectativa de Vida, Despesas com Saúde e Taxa de Mortalidade
-Consulta que analisa a relação entre a expectativa de vida, os gastos com saúde como percentual do PIB e a taxa de mortalidade, destacando países com altos gastos em saúde, mas baixa expectativa de vida.
+Consulta que analisa a relação entre as médias de expectativa de vida, os gastos com saúde como percentual do PIB e a taxa de mortalidade, destacando países com altos gastos em saúde, mas baixa expectativa de vida.
 ```sql
 SELECT 
     c.country_name,
-    l.gender,
-    l.value AS life_expectancy,
-    h.expenditure AS health_expenditure,
-    d.death_rate AS crude_death_rate,
-    NTILE(4) OVER (ORDER BY h.expenditure DESC) AS health_expenditure_quartile,
-    ROUND((l.value / h.expenditure), 2) AS life_expectancy_per_expenditure
+    le.gender,
+    ROUND(AVG(le.value)::numeric, 2) AS avg_life_expectancy,
+    ROUND(AVG(h.expenditure)::numeric, 2) AS avg_health_expenditure,
+    ROUND(AVG(dm.death_rate)::numeric, 2) AS avg_crude_death_rate,
+    NTILE(4) OVER (PARTITION BY le.gender ORDER BY AVG(h.expenditure) DESC) AS health_expenditure_quartile,
+    ROUND((AVG(le.value) / NULLIF(AVG(h.expenditure), 0))::numeric, 2) AS avg_life_expectancy_per_expenditure
 FROM 
-    Life_Expectancy l
+    life_expectancy le
 JOIN 
-    Country c ON l.country_id = c.country_id
+    demography dm ON le.id_demography = dm.id_demography
 JOIN 
-    Health h ON c.country_id = h.country_id AND l.year = h.year
+    country c ON dm.country_code = c.country_code
 JOIN 
-    Demography d ON c.country_id = d.country_id AND l.year = d.year
+    health h ON c.country_code = h.country_code AND dm.year = h.year
 WHERE 
-    l.year = h.year
-    AND l.value IS NOT NULL
+    le.value IS NOT NULL
     AND h.expenditure IS NOT NULL
-    AND d.death_rate IS NOT NULL
+    AND dm.death_rate IS NOT NULL
+    AND h.expenditure > 0
+GROUP BY 
+    c.country_name,
+    le.gender
 ORDER BY 
-    health_expenditure_quartile, life_expectancy_per_expenditure DESC, crude_death_rate ASC;
+    c.country_name,
+    le.gender,
+    health_expenditure_quartile, 
+    avg_life_expectancy_per_expenditure DESC, 
+    avg_crude_death_rate ASC;
 ```
 
 #### 3. População Urbana, PIB e Taxa de Migração
-Consulta que verifica a relação entre a população urbana, o PIB e a taxa de migração líquida, destacando países com alta urbanização e crescimento econômico.
+Consulta que verifica a relação entre população urbana, o PIB e a taxa de migração líquida, destacando países com alta urbanização e crescimento econômico.
 ```sql
 SELECT 
     c.country_name,
     d.urban_pop AS urban_population,
-    e.gdp AS gross_domestic_product,
-    d.net_migration AS net_migration,
-    (d.urban_pop::NUMERIC / d.total_pop) * 100 AS urbanization_rate,
+    ROUND(e.gdp::numeric, 5) AS gross_domestic_product,
+    ROUND(d.net_migration::numeric, 3) AS net_migration,
+    ROUND(((d.urban_pop / (d.urban_pop + d.rural_pop)) * 100)::numeric, 5) AS urbanization_rate,
     CASE 
         WHEN d.net_migration > 0 THEN 'Net Influx'
         WHEN d.net_migration < 0 THEN 'Net Outflux'
         ELSE 'Stable Migration'
     END AS migration_trend
 FROM 
-    Demography d
+    demography d
 JOIN 
-    Country c ON d.country_id = c.country_id
+    country c ON d.country_code = c.country_code
 JOIN 
-    Economy e ON c.country_id = e.country_id AND d.year = e.year
+    economy e ON c.country_code = e.country_code AND d.year = e.year
 WHERE 
-    d.year = e.year
-    AND d.urban_pop IS NOT NULL
+    d.urban_pop IS NOT NULL
+    AND d.rural_pop IS NOT NULL
     AND e.gdp IS NOT NULL
 ORDER BY 
-    urbanization_rate DESC, gross_domestic_product DESC, migration_trend;
+    urbanization_rate DESC, gross_domestic_product DESC;
 ```
 
 #### 4. Impacto da Educação e Saúde na Redução da Pobreza
-Consulta que relaciona a taxa de matrícula no ensino primário, os gastos com saúde e a porcentagem da população abaixo da linha de pobreza para avaliar o impacto combinado da educação e saúde na redução da pobreza.
+Consulta que relaciona as médias de taxa de matrícula no ensino primário, os gastos com saúde e a porcentagem da população abaixo da linha de pobreza para avaliar o impacto combinado da educação e saúde na redução da pobreza.
 ```sql
 SELECT 
     c.country_name,
-    ed.prim_enrol AS primary_enrollment_rate,
-    h.expenditure AS health_expenditure,
-    p.headcount AS poverty_rate,
-    (ed.prim_enrol * h.expenditure) AS education_health_index,
+    ROUND(AVG(ed.prim_enrol)::numeric, 10) AS avg_primary_enrollment_rate,
+    ROUND(AVG(h.expenditure)::numeric, 10) AS avg_health_expenditure,
+    ROUND(AVG(s.headcount)::numeric, 10) AS avg_poverty_rate,
+    ROUND((AVG(ed.prim_enrol) * AVG(h.expenditure))::numeric, 10) AS education_health_index,
     CASE 
-        WHEN p.headcount < 10 THEN 'Low Poverty'
-        WHEN p.headcount BETWEEN 10 AND 30 THEN 'Moderate Poverty'
+        WHEN AVG(s.headcount) < 10 THEN 'Low Poverty'
+        WHEN AVG(s.headcount) BETWEEN 10 AND 30 THEN 'Moderate Poverty'
         ELSE 'High Poverty'
     END AS poverty_category
 FROM 
-    Education ed
+    education ed
 JOIN 
-    Country c ON ed.country_id = c.country_id
+    country c ON ed.country_code = c.country_code
 JOIN 
-    Health h ON c.country_id = h.country_id AND ed.year = h.year
+    health h ON c.country_code = h.country_code AND ed.year = h.year
 JOIN 
-    Poverty p ON c.country_id = p.country_id AND ed.year = p.year
+    survey s ON c.country_code = s.country_code AND ed.year = s.survey_year
 WHERE 
-    ed.year = h.year
-    AND ed.prim_enrol IS NOT NULL
+    ed.prim_enrol IS NOT NULL
     AND h.expenditure IS NOT NULL
-    AND p.headcount IS NOT NULL
+    AND s.headcount IS NOT NULL
+GROUP BY 
+    c.country_name
 ORDER BY 
-    education_health_index DESC, poverty_rate ASC;
+    education_health_index DESC, avg_poverty_rate ASC;
 ```
 
 #### 5. Desigualdade, Taxa de Pobreza e Distribuição de Renda
@@ -249,25 +258,24 @@ Consulta que analisa a relação entre o coeficiente de Gini, a taxa de pobreza 
 ```sql
 SELECT 
     c.country_name,
-    p.gini AS gini_coefficient,
-    p.headcount AS poverty_rate,
+    ROUND(s.gini::numeric, 5) AS gini_coefficient,
+    ROUND(s.headcount::numeric, 5) AS poverty_rate,
     d.name AS income_decile,
-    d.value AS income_share,
-    SUM(d.value) OVER (PARTITION BY c.country_name ORDER BY d.name) AS cumulative_income_share,
+    ROUND(d.value::numeric, 5) AS income_share,
+    ROUND(SUM(d.value) OVER (PARTITION BY c.country_name ORDER BY d.name)::numeric, 5) AS cumulative_income_share,
     CASE 
-        WHEN p.gini > 0.4 THEN 'High Inequality'
+        WHEN s.gini > 0.4 THEN 'High Inequality'
         ELSE 'Low Inequality'
     END AS inequality_category
 FROM 
-    Poverty p
+    survey s
 JOIN 
-    Country c ON p.country_id = c.country_id
+    country c ON s.country_code = c.country_code
 JOIN 
-    Decile d ON c.country_id = d.country_id AND p.year = d.year
+    decile d ON s.id_survey = d.id_survey
 WHERE 
-    p.year = d.year
-    AND p.gini IS NOT NULL
-    AND p.headcount IS NOT NULL
+    s.gini IS NOT NULL
+    AND s.headcount IS NOT NULL
 ORDER BY 
     gini_coefficient DESC, poverty_rate DESC, cumulative_income_share ASC;
 ```
