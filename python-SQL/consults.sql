@@ -15,11 +15,11 @@ SELECT
 FROM 
     employment e
 JOIN 
-    country c ON e.country_code = c.country_code
+    country c ON e.id_country = c.id_country -- ATUALIZADO
 JOIN 
-    survey s ON c.country_code = s.country_code
+    survey s ON c.id_country = s.id_country -- ATUALIZADO
 JOIN 
-    education ed ON c.country_code = ed.country_code AND e.year = ed.year
+    education ed ON c.id_country = ed.id_country AND e.year = ed.year -- ATUALIZADO
 WHERE 
     e.year = s.survey_year
     AND ed.sec_enrol IS NOT NULL
@@ -46,9 +46,9 @@ FROM
 JOIN 
     demography dm ON le.id_demography = dm.id_demography
 JOIN 
-    country c ON dm.country_code = c.country_code
+    country c ON dm.id_country = c.id_country -- ATUALIZADO
 JOIN 
-    health h ON c.country_code = h.country_code AND dm.year = h.year
+    health h ON c.id_country = h.id_country AND dm.year = h.year -- ATUALIZADO
 WHERE 
     le.value IS NOT NULL
     AND h.expenditure IS NOT NULL
@@ -81,9 +81,9 @@ SELECT
 FROM 
     demography d
 JOIN 
-    country c ON d.country_code = c.country_code
+    country c ON d.id_country = c.id_country -- ATUALIZADO
 JOIN 
-    economy e ON c.country_code = e.country_code AND d.year = e.year
+    economy e ON c.id_country = e.id_country AND d.year = e.year -- ATUALIZADO
 WHERE 
     d.urban_pop IS NOT NULL
     AND d.rural_pop IS NOT NULL
@@ -109,11 +109,11 @@ SELECT
 FROM 
     education ed
 JOIN 
-    country c ON ed.country_code = c.country_code
+    country c ON ed.id_country = c.id_country -- ATUALIZADO
 JOIN 
-    health h ON c.country_code = h.country_code AND ed.year = h.year
+    health h ON c.id_country = h.id_country AND ed.year = h.year -- ATUALIZADO
 JOIN 
-    survey s ON c.country_code = s.country_code AND ed.year = s.survey_year
+    survey s ON c.id_country = s.id_country AND ed.year = s.survey_year -- ATUALIZADO
 WHERE 
     ed.prim_enrol IS NOT NULL
     AND h.expenditure IS NOT NULL
@@ -141,7 +141,7 @@ SELECT
 FROM 
     survey s
 JOIN 
-    country c ON s.country_code = c.country_code
+    country c ON s.id_country = c.id_country -- ATUALIZADO
 JOIN 
     decile d ON s.id_survey = d.id_survey
 WHERE 

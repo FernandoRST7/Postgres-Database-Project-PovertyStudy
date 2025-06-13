@@ -13,37 +13,49 @@ conn = psycopg2.connect(
 # Cria o cursor
 cursor = conn.cursor()
 
-# Cria tabela no db
+# Cria tabela no db com o NOVO MODELO
 try:
     cursor.execute("""
-                
--- Drop existing tables if they exist (optional, for clean runs)
--- Use with caution, this will delete all data!
-DROP TABLE IF EXISTS COUNTRY CASCADE;
-DROP TABLE IF EXISTS SURVEY CASCADE;
-DROP TABLE IF EXISTS REGION CASCADE; -- Typo matches schema
-DROP TABLE IF EXISTS DEMOGRAPHY CASCADE;
-DROP TABLE IF EXISTS HEALTH CASCADE;
-DROP TABLE IF EXISTS EDUCATION CASCADE;
-DROP TABLE IF EXISTS ECONOMY CASCADE;
-DROP TABLE IF EXISTS POPULATION CASCADE;
-DROP TABLE IF EXISTS EMPLOYMENT CASCADE;
-DROP TABLE IF EXISTS LIFE_EXPECTANCY CASCADE;
-DROP TABLE IF EXISTS DECILE CASCADE;
+-- BEGIN transaction block
+BEGIN;
 
+-- Drop existing tables if they exist (for clean runs)
+DROP TABLE IF EXISTS public.country CASCADE;
+DROP TABLE IF EXISTS public.survey CASCADE;
+DROP TABLE IF EXISTS public.region CASCADE;
+DROP TABLE IF EXISTS public.demography CASCADE;
+DROP TABLE IF EXISTS public.health CASCADE;
+DROP TABLE IF EXISTS public.education CASCADE;
+DROP TABLE IF EXISTS public.economy CASCADE;
+DROP TABLE IF EXISTS public.population CASCADE;
+DROP TABLE IF EXISTS public.employment CASCADE;
+DROP TABLE IF EXISTS public.life_expectancy CASCADE;
+DROP TABLE IF EXISTS public.decile CASCADE;
+
+-- Create tables based on the new schema
+CREATE TABLE IF NOT EXISTS public.region
+(
+    id_region serial NOT NULL,
+    region_code character varying NOT NULL,
+    region_name character varying NOT NULL,
+    PRIMARY KEY (id_region),
+    UNIQUE (region_code) -- Add unique constraint for joining
+);
 
 CREATE TABLE IF NOT EXISTS public.country
 (
+    id_country serial NOT NULL,
     country_code character varying NOT NULL,
     country_name character varying,
-    region_code character varying NOT NULL,
-    PRIMARY KEY (country_code)
+    id_region integer NOT NULL,
+    PRIMARY KEY (id_country),
+    UNIQUE (country_code) -- Add unique constraint for joining
 );
 
 CREATE TABLE IF NOT EXISTS public.survey
 (
     id_survey serial NOT NULL,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     welfare_type character varying,
     survey_acronym character varying,
     survey_comparability integer,
@@ -63,13 +75,6 @@ CREATE TABLE IF NOT EXISTS public.survey
     PRIMARY KEY (id_survey)
 );
 
-CREATE TABLE IF NOT EXISTS public.region
-(
-    region_code character varying NOT NULL,
-    region_name character varying NOT NULL,
-    PRIMARY KEY (region_code)
-);
-
 CREATE TABLE IF NOT EXISTS public.decile
 (
     id_decile serial NOT NULL,
@@ -83,7 +88,7 @@ CREATE TABLE IF NOT EXISTS public.demography
 (
     id_demography serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     pop_density double precision,
     urban_pop double precision,
     rural_pop double precision,
@@ -97,7 +102,7 @@ CREATE TABLE IF NOT EXISTS public.employment
 (
     id_employment serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     child_emp double precision,
     unemp double precision,
     vulnerable_emp double precision,
@@ -112,7 +117,7 @@ CREATE TABLE IF NOT EXISTS public.education
 (
     id_education serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     child_out_of_school double precision,
     progression_to_sec double precision,
     expenditure double precision,
@@ -127,7 +132,7 @@ CREATE TABLE IF NOT EXISTS public.economy
 (
     id_economy serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     gdp double precision,
     inflation double precision,
     tax_revenue double precision,
@@ -156,7 +161,7 @@ CREATE TABLE IF NOT EXISTS public.life_expectancy
 CREATE TABLE IF NOT EXISTS public.health
 (
     id_health serial NOT NULL,
-    country_code character varying NOT NULL,
+    id_country integer NOT NULL,
     year integer,
     hospital_beds double precision,
     physicians double precision,
@@ -164,116 +169,43 @@ CREATE TABLE IF NOT EXISTS public.health
     PRIMARY KEY (id_health)
 );
 
+-- Add Foreign Keys
 ALTER TABLE IF EXISTS public.country
-    ADD FOREIGN KEY (region_code)
-    REFERENCES public.region (region_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_region) REFERENCES public.region (id_region);
 ALTER TABLE IF EXISTS public.survey
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
 ALTER TABLE IF EXISTS public.decile
-    ADD FOREIGN KEY (id_survey)
-    REFERENCES public.survey (id_survey) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_survey) REFERENCES public.survey (id_survey);
 ALTER TABLE IF EXISTS public.demography
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
 ALTER TABLE IF EXISTS public.employment
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
 ALTER TABLE IF EXISTS public.education
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
 ALTER TABLE IF EXISTS public.economy
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public.population
-    ADD FOREIGN KEY (id_demography)
-    REFERENCES public.demography (id_demography) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public.life_expectancy
-    ADD FOREIGN KEY (id_demography)
-    REFERENCES public.demography (id_demography) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
 ALTER TABLE IF EXISTS public.health
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public.country (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-    """)
+    ADD FOREIGN KEY (id_country) REFERENCES public.country (id_country);
+ALTER TABLE IF EXISTS public.population
+    ADD FOREIGN KEY (id_demography) REFERENCES public.demography (id_demography);
+ALTER TABLE IF EXISTS public.life_expectancy
+    ADD FOREIGN KEY (id_demography) REFERENCES public.demography (id_demography);
 
+COMMIT;
+-- END transaction block
+    """)
     conn.commit()
-    print("Tabela recriada do zero!")
+    print("Tabelas recriadas com o novo modelo!")
 
 except Exception as e:
     conn.rollback()
-    print(f"Erro: {e}") 
+    print(f"Erro ao recriar tabelas: {e}")
 
-cursor.execute("SET session_replication_role = 'origin';")
-conn.commit()
-
-# Lê o CSV e separa os dados
-df_poverty = pd.read_csv('processing\poverty_inequality\Poverty_Inequality_filtered.csv')
-df_indicators = pd.read_csv('processing\global_indicators\Global_Indicators_filtered.csv')
-
-df_region = pd.read_csv('processing\poverty_inequality\entities_csv\Region.csv')
-df_country = pd.read_csv('processing\poverty_inequality\entities_csv\Country.csv')
-
-
-df_survey = df_poverty[['country_code', 'welfare_type', 'survey_acronym', 'survey_comparability', 
-                'comparable_spell', 'poverty_line', 'headcount', 'poverty_gap', 
-                'poverty_severity', 'gini', 'reporting_pop', 'reporting_pce', 
-                'distribution_type', 'spl', 'survey_year']]  # Para a tabela 'Survey'
-
+# --- INÍCIO DA CARGA DE DADOS ---
 
 # Passo 1: Carregar dados na tabela REGION
-# Verificar duplicidade e só inserir valores únicos
-df_region.drop_duplicates(subset=['region_code'], inplace=True)  # Remover duplicatas por 'region_code'
-
-
-with open('processing\poverty_inequality\entities_csv\Region.csv', 'r') as f:
+with open('processing/poverty_inequality/entities_csv/Region.csv', 'r') as f:
+    # id_region será gerado automaticamente pelo 'serial'
     cursor.copy_expert("""
         COPY REGION (region_code, region_name)
         FROM STDIN
@@ -282,235 +214,185 @@ with open('processing\poverty_inequality\entities_csv\Region.csv', 'r') as f:
 conn.commit()
 print("Tabela Region populada com sucesso!")
 
-
-# Passo 2: Carregar dados na tabela COUNTRY
-with open('processing\poverty_inequality\entities_csv\Country.csv', 'r') as f1: # Pode dar erro com duplicatas
-    cursor.copy_expert("""
-        COPY COUNTRY (region_code, country_name, country_code)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',');
-    """, f1)
+# Passo 2: Carregar dados na tabela COUNTRY (usando tabela temporária)
+cursor.execute("CREATE TEMP TABLE temp_country (region_code VARCHAR, country_name VARCHAR, country_code VARCHAR);")
+with open('processing/poverty_inequality/entities_csv/Country.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_country FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO COUNTRY (country_code, country_name, id_region)
+    SELECT t.country_code, t.country_name, r.id_region
+    FROM temp_country t
+    JOIN REGION r ON t.region_code = r.region_code;
+""")
+cursor.execute("DROP TABLE temp_country;")
 conn.commit()
 print("Tabela Country populada com sucesso!")
 
-
-# Passo 3: Carregar dados na tabela SURVEY
-with open('processing\poverty_inequality\entities_csv\Survey.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY SURVEY(country_code, welfare_type, survey_acronym, survey_comparability, 
-                               comparable_spell, poverty_line, headcount, poverty_gap, poverty_severity, 
-                               gini, reporting_pop, reporting_pce, distribution_type, spl, survey_year, survey_coverage, reporting_level)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
+# Passo 3: Carregar dados na tabela SURVEY (usando tabela temporária)
+cursor.execute("""
+    CREATE TEMP TABLE temp_survey (
+        country_code VARCHAR, welfare_type VARCHAR, survey_acronym VARCHAR, survey_comparability INTEGER,
+        comparable_spell VARCHAR, poverty_line DOUBLE PRECISION, headcount DOUBLE PRECISION, poverty_gap DOUBLE PRECISION,
+        poverty_severity DOUBLE PRECISION, gini DOUBLE PRECISION, reporting_pop INTEGER, reporting_pce DOUBLE PRECISION,
+        distribution_type VARCHAR, spl DOUBLE PRECISION, survey_year INTEGER, survey_coverage VARCHAR, reporting_level VARCHAR
+    );
+""")
+with open('processing/poverty_inequality/entities_csv/Survey.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_survey FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO SURVEY (id_country, welfare_type, survey_acronym, survey_comparability, comparable_spell, poverty_line, headcount,
+                        poverty_gap, poverty_severity, gini, reporting_pop, reporting_pce, distribution_type, spl, survey_year,
+                        survey_coverage, reporting_level)
+    SELECT c.id_country, t.welfare_type, t.survey_acronym, t.survey_comparability, t.comparable_spell, t.poverty_line, t.headcount,
+           t.poverty_gap, t.poverty_severity, t.gini, t.reporting_pop, t.reporting_pce, t.distribution_type, t.spl, t.survey_year,
+           t.survey_coverage, t.reporting_level
+    FROM temp_survey t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_survey;")
 conn.commit()
 print("Tabela Survey populada com sucesso!")
 
-
 # Passo 4: Carregar dados na tabela DECILE
-# Criar uma tabela temporária no banco de dados
 cursor.execute("""
     CREATE TEMP TABLE temp_decile (
-        country_code VARCHAR,
-        survey_year INTEGER,
-        survey_acronym VARCHAR,
-        survey_coverage VARCHAR,
-        reporting_level VARCHAR,
-        name VARCHAR,
-        value DOUBLE PRECISION
+        country_code VARCHAR, survey_year INTEGER, survey_acronym VARCHAR, survey_coverage VARCHAR,
+        reporting_level VARCHAR, name VARCHAR, value DOUBLE PRECISION
     );
 """)
-conn.commit()
-
-# Carregar o CSV de Decile
-df_decile = pd.read_csv("processing\poverty_inequality\entities_csv\Decile.csv")
- 
-# Inserir os dados do DataFrame na tabela temporária
-for _, row in df_decile.iterrows():
-    cursor.execute("""
-        INSERT INTO temp_decile (country_code, survey_year, survey_acronym, survey_coverage, reporting_level, name, value)
-        VALUES (%s, %s, %s, %s, %s, %s, %s);
-    """, (row['country_code'], row['survey_year'], row['survey_acronym'], 
-          row['survey_coverage'], row['reporting_level'], row['name'], row['value']))
-conn.commit()
-
-# Inserir os dados na tabela DECILE
+with open("processing/poverty_inequality/entities_csv/Decile.csv", 'r') as f:
+     cursor.copy_expert("COPY temp_decile FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
     INSERT INTO DECILE (name, value, id_survey)
-    SELECT
-        t.name,
-        t.value,
-        s.id_survey
-    FROM
-        temp_decile t
-    INNER JOIN
-        SURVEY s
-    ON
-        t.country_code = s.country_code AND 
-        t.survey_year = s.survey_year AND 
-        t.survey_acronym = s.survey_acronym AND
-        t.survey_coverage = s.survey_coverage AND 
-        t.reporting_level = s.reporting_level;
+    SELECT t.name, t.value, s.id_survey
+    FROM temp_decile t
+    JOIN SURVEY s ON t.country_code = (SELECT country_code FROM country WHERE id_country = s.id_country)
+                  AND t.survey_year = s.survey_year
+                  AND t.survey_acronym = s.survey_acronym
+                  AND t.survey_coverage = s.survey_coverage
+                  AND t.reporting_level = s.reporting_level;
 """)
-conn.commit()
-
-# Remover a tabela temporária
 cursor.execute("DROP TABLE temp_decile;")
 conn.commit()
 print("Tabela Decile populada com sucesso!")
 
-
-# Passo 5: Carregar dados na tabela ECONOMY
-with open('processing\global_indicators\entities_csv\Economy.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY ECONOMY(year, country_code, tax_revenue, inflation, gdp)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
-conn.commit()
-print("Tabela Economy populada com sucesso!")
-
-
-# Passo 6: Carregar dados na tabela EMPLOYMENT
-with open('processing\global_indicators\entities_csv\Employment.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY EMPLOYMENT(year, country_code, child_emp, unemp, vulnerable_emp, part_time, employers, labor_force_total, labor_force_fem)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
-conn.commit()
-print("Tabela Employment populada com sucesso!")
-
-
-# passo 7: Carregar dados na tabela EDUCATION
-with open('processing\global_indicators\entities_csv\Education.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY EDUCATION(year, country_code, child_out_of_school, progression_to_sec, expenditure, preprim_enroll, prim_enrol, sec_enrol, terti_enrol)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
-conn.commit()
-print("Tabela Education populada com sucesso!")
-
-
-# Passo 8: Carregar dados na tabela HEALTH
-with open('processing\global_indicators\entities_csv\Health.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY HEALTH(year, country_code, hospital_beds, physicians, expenditure)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
-conn.commit()
-print("Tabela Health populada com sucesso!")
-
-
-# Passo 9: Carregar dados na tabela DEMOGRAPHY
-with open('processing\global_indicators\entities_csv\Demography.csv', 'r') as f2:
-    cursor.copy_expert("""
-        COPY DEMOGRAPHY(year, country_code, pop_density, urban_pop, rural_pop, net_migration, death_rate, birth_rate)
-        FROM STDIN
-        WITH (FORMAT csv, HEADER true, DELIMITER ',')
-    """, f2)
+# Passo 5: Carregar dados na tabela DEMOGRAPHY
+cursor.execute("""
+    CREATE TEMP TABLE temp_demography (
+        year INTEGER, country_code VARCHAR, pop_density DOUBLE PRECISION, urban_pop DOUBLE PRECISION,
+        rural_pop DOUBLE PRECISION, net_migration DOUBLE PRECISION, death_rate DOUBLE PRECISION, birth_rate DOUBLE PRECISION
+    );
+""")
+with open('processing/global_indicators/entities_csv/Demography.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_demography FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO DEMOGRAPHY (year, id_country, pop_density, urban_pop, rural_pop, net_migration, death_rate, birth_rate)
+    SELECT t.year, c.id_country, t.pop_density, t.urban_pop, t.rural_pop, t.net_migration, t.death_rate, t.birth_rate
+    FROM temp_demography t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_demography;")
 conn.commit()
 print("Tabela Demography populada com sucesso!")
 
-
-# Psso 10: Carregar dados na tabela POPULATION (similar ao de decile\Passo 4)
-# Criar uma tabela temporária no banco de dados
+# Passo 6: Carregar dados na tabela ECONOMY
+cursor.execute("CREATE TEMP TABLE temp_economy (year INTEGER, country_code VARCHAR, tax_revenue DOUBLE PRECISION, inflation DOUBLE PRECISION, gdp DOUBLE PRECISION);")
+with open('processing/global_indicators/entities_csv/Economy.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_economy FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
-    CREATE TEMP TABLE temp_population (
-        year INTEGER,
-        country_code VARCHAR,
-        pop_ages VARCHAR,
-        gender VARCHAR,
-        number DOUBLE PRECISION
+    INSERT INTO ECONOMY (year, id_country, tax_revenue, inflation, gdp)
+    SELECT t.year, c.id_country, t.tax_revenue, t.inflation, t.gdp
+    FROM temp_economy t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_economy;")
+conn.commit()
+print("Tabela Economy populada com sucesso!")
+
+# Passo 7: Carregar dados na tabela EMPLOYMENT
+cursor.execute("""
+    CREATE TEMP TABLE temp_employment (
+        year INTEGER, country_code VARCHAR, child_emp DOUBLE PRECISION, unemp DOUBLE PRECISION, vulnerable_emp DOUBLE PRECISION,
+        part_time DOUBLE PRECISION, employers DOUBLE PRECISION, labor_force_total DOUBLE PRECISION, labor_force_fem DOUBLE PRECISION
     );
 """)
+with open('processing/global_indicators/entities_csv/Employment.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_employment FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO EMPLOYMENT (year, id_country, child_emp, unemp, vulnerable_emp, part_time, employers, labor_force_total, labor_force_fem)
+    SELECT t.year, c.id_country, t.child_emp, t.unemp, t.vulnerable_emp, t.part_time, t.employers, t.labor_force_total, t.labor_force_fem
+    FROM temp_employment t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_employment;")
 conn.commit()
+print("Tabela Employment populada com sucesso!")
 
-# Carregar o CSV de Population
-df_population = pd.read_csv("processing\global_indicators\entities_csv\Population.csv")
-
-# Inserir os dados do DataFrame na tabela temporária
-for _, row in df_population.iterrows():
-    cursor.execute("""
-        INSERT INTO temp_population (year, country_code, pop_ages, gender, number)
-        VALUES (%s, %s, %s, %s, %s);
-    """, (row['year'], row['country_code'], row['pop_ages'], row['gender'], row['number']))
+# Passo 8: Carregar dados na tabela EDUCATION
+cursor.execute("""
+    CREATE TEMP TABLE temp_education (
+        year INTEGER, country_code VARCHAR, child_out_of_school DOUBLE PRECISION, progression_to_sec DOUBLE PRECISION,
+        expenditure DOUBLE PRECISION, preprim_enroll DOUBLE PRECISION, prim_enrol DOUBLE PRECISION, sec_enrol DOUBLE PRECISION, terti_enrol DOUBLE PRECISION
+    );
+""")
+with open('processing/global_indicators/entities_csv/Education.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_education FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO EDUCATION (year, id_country, child_out_of_school, progression_to_sec, expenditure, preprim_enroll, prim_enrol, sec_enrol, terti_enrol)
+    SELECT t.year, c.id_country, t.child_out_of_school, t.progression_to_sec, t.expenditure, t.preprim_enroll, t.prim_enrol, t.sec_enrol, t.terti_enrol
+    FROM temp_education t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_education;")
 conn.commit()
+print("Tabela Education populada com sucesso!")
 
-# Inserir os dados na tabela Population com id_demography
+# Passo 9: Carregar dados na tabela HEALTH
+cursor.execute("CREATE TEMP TABLE temp_health (year INTEGER, country_code VARCHAR, hospital_beds DOUBLE PRECISION, physicians DOUBLE PRECISION, expenditure DOUBLE PRECISION);")
+with open('processing/global_indicators/entities_csv/Health.csv', 'r') as f:
+    cursor.copy_expert("COPY temp_health FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
+cursor.execute("""
+    INSERT INTO HEALTH (year, id_country, hospital_beds, physicians, expenditure)
+    SELECT t.year, c.id_country, t.hospital_beds, t.physicians, t.expenditure
+    FROM temp_health t
+    JOIN COUNTRY c ON t.country_code = c.country_code;
+""")
+cursor.execute("DROP TABLE temp_health;")
+conn.commit()
+print("Tabela Health populada com sucesso!")
+
+# Passo 10: Carregar dados na tabela POPULATION (lógica original ainda é válida)
+cursor.execute("CREATE TEMP TABLE temp_population (year INTEGER, country_code VARCHAR, pop_ages VARCHAR, gender VARCHAR, number DOUBLE PRECISION);")
+with open("processing/global_indicators/entities_csv/Population.csv", 'r') as f:
+    cursor.copy_expert("COPY temp_population FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
     INSERT INTO POPULATION (id_demography, pop_ages, gender, number)
-    SELECT
-        d.id_demography,
-        t.pop_ages,
-        t.gender,
-        t.number
-    FROM
-        temp_population t
-    INNER JOIN
-        DEMOGRAPHY d
-    ON
-        t.year = d.year AND t.country_code = d.country_code;
+    SELECT d.id_demography, t.pop_ages, t.gender, t.number
+    FROM temp_population t
+    JOIN COUNTRY c ON t.country_code = c.country_code
+    JOIN DEMOGRAPHY d ON c.id_country = d.id_country AND t.year = d.year;
 """)
-conn.commit()
-
-# Remover a tabela temporária
 cursor.execute("DROP TABLE temp_population;")
 conn.commit()
-
 print("Tabela Population populada com sucesso!")
 
-
-# Passo 11: Carregar dados na tabela LIFE_EXPECTANCY
-# Criar uma tabela temporária no banco de dados
-cursor.execute("""
-    CREATE TEMP TABLE temp_life_expectancy (
-        year INTEGER,
-        country_code VARCHAR,
-        gender VARCHAR,
-        value DOUBLE PRECISION
-    );
-""")
-conn.commit()
-
-# Carregar o CSV de Life Expectancy
-df_life_expectancy = pd.read_csv("processing\global_indicators\entities_csv\Life_expectancy.csv")
-
-# Inserir os dados do DataFrame na tabela temporária
-for _, row in df_life_expectancy.iterrows():
-    cursor.execute("""
-        INSERT INTO temp_life_expectancy (year, country_code, gender, value)
-        VALUES (%s, %s, %s, %s);
-    """, (row['year'], row['country_code'], row['gender'], row['value']))
-conn.commit()
-
-# Inserir os dados na tabela LIFE_EXPECTANCY com id_demography
+# Passo 11: Carregar dados na tabela LIFE_EXPECTANCY (lógica original ainda é válida)
+cursor.execute("CREATE TEMP TABLE temp_life_expectancy (year INTEGER, country_code VARCHAR, gender VARCHAR, value DOUBLE PRECISION);")
+with open("processing/global_indicators/entities_csv/Life_expectancy.csv", 'r') as f:
+    cursor.copy_expert("COPY temp_life_expectancy FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
     INSERT INTO LIFE_EXPECTANCY (id_demography, gender, value)
-    SELECT
-        d.id_demography,
-        t.gender,
-        t.value
-    FROM
-        temp_life_expectancy t
-    INNER JOIN
-        DEMOGRAPHY d
-    ON
-        t.year = d.year AND t.country_code = d.country_code;
+    SELECT d.id_demography, t.gender, t.value
+    FROM temp_life_expectancy t
+    JOIN COUNTRY c ON t.country_code = c.country_code
+    JOIN DEMOGRAPHY d ON c.id_country = d.id_country AND t.year = d.year;
 """)
-conn.commit()
-
-# Remover a tabela temporária
 cursor.execute("DROP TABLE temp_life_expectancy;")
 conn.commit()
-
 print("Tabela Life Expectancy populada com sucesso!")
-
-# Commit FINAL das inserções
-conn.commit()
 
 # Fechar a conexão
 cursor.close()
 conn.close()
+
+print("\nProcesso de carga de dados concluído com sucesso!")

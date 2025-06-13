@@ -1,7 +1,7 @@
 import pandas as pd
 
 ## Carregar o CSV
-df = pd.read_csv("processing\global_indicators\Global_Indicators_filtered2.csv")
+df = pd.read_csv("processing/global_indicators/Global_Indicators_filtered2.csv")
 
 
 # CRIA CSV DE DEMOGRAPHY
@@ -29,7 +29,7 @@ df_demography.rename(columns={
 }, inplace=True)
 
 ## Salvar o resultado
-df_demography.to_csv("processing\global_indicators\entities_csv\Demography.csv", index=False)
+df_demography.to_csv("processing/global_indicators/entities_csv/Demography.csv", index=False)
 
 print("Arquivo Demography.csv gerado com sucesso!")
 
@@ -56,7 +56,7 @@ df_life_expectancy = df_filtrado_life_expectancy[['Year', 'country_code', 'gende
 })
 
 # Salvar o CSV
-df_life_expectancy.to_csv("processing\global_indicators\entities_csv\Life_expectancy.csv", index=False)
+df_life_expectancy.to_csv("processing/global_indicators/entities_csv/Life_expectancy.csv", index=False)
 
 print("Arquivo Life_expectancy.csv gerado com sucesso!")
 
@@ -97,7 +97,7 @@ df_population = df_filtrado_population[['Year', 'country_code', 'pop_ages', 'gen
 })
 
 # Salvar o CSV
-df_population.to_csv("processing\global_indicators\entities_csv\Population.csv", index=False)
+df_population.to_csv("processing/global_indicators/entities_csv/Population.csv", index=False)
 
 print("Arquivo Population.csv gerado com sucesso!")
 
@@ -128,7 +128,7 @@ df_employment.rename(columns={
 }, inplace=True)
 
 ## Salvar o resultado
-df_employment.to_csv("processing\global_indicators\entities_csv\Employment.csv", index=False)
+df_employment.to_csv("processing/global_indicators/entities_csv/Employment.csv", index=False)
 
 print("Arquivo Employment.csv gerado com sucesso!")
 
@@ -161,7 +161,7 @@ df_education.rename(columns={
 
 
 ## Salvar o resultado
-df_education.to_csv("processing\global_indicators\entities_csv\Education.csv", index=False)
+df_education.to_csv("processing/global_indicators/entities_csv/Education.csv", index=False)
 
 print("Arquivo Education.csv gerado com sucesso!")
 
@@ -188,7 +188,7 @@ df_health.rename(columns={
 }, inplace=True)
 
 ## Salvar o resultado
-df_health.to_csv("processing\global_indicators\entities_csv\Health.csv", index=False)
+df_health.to_csv("processing/global_indicators/entities_csv/Health.csv", index=False)
 
 print("Arquivo Health.csv gerado com sucesso!")
 
@@ -215,6 +215,6 @@ df_economy.rename(columns={
 
 
 ## Salvar o resultado
-df_economy.to_csv("processing\global_indicators\entities_csv\Economy.csv", index=False)
+df_economy.to_csv("processing/global_indicators/entities_csv/Economy.csv", index=False)
 
 print("Arquivo Economy.csv gerado com sucesso!")
