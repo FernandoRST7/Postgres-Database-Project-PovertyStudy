@@ -1,13 +1,17 @@
 import psycopg2
-import pandas as pd
+from dotenv import load_dotenv
+import os
 
-# Conecta com o banco de dados
+# Carrega variáveis do arquivo .env
+load_dotenv()
+
+# Conecta com o banco de dados usando variáveis de ambiente
 conn = psycopg2.connect(
-    dbname='postgres',
-    user='postgres',
-    password=,  # Senha do usuário postgres
-    host='localhost',
-    port='5432'
+    dbname=os.getenv('DB_NAME'),
+    user=os.getenv('DB_USER'),
+    password=os.getenv('DB_PASSWORD'),
+    host=os.getenv('DB_HOST'),
+    port=os.getenv('DB_PORT')
 )
 
 # Cria o cursor
@@ -121,7 +125,7 @@ CREATE TABLE IF NOT EXISTS public.education
     child_out_of_school double precision,
     progression_to_sec double precision,
     expenditure double precision,
-    preprim_enroll double precision,
+    preprim_enrol double precision,
     prim_enrol double precision,
     sec_enrol double precision,
     terti_enrol double precision,
@@ -201,6 +205,7 @@ except Exception as e:
     conn.rollback()
     print(f"Erro ao recriar tabelas: {e}")
 
+
 # --- INÍCIO DA CARGA DE DADOS ---
 
 # Passo 1: Carregar dados na tabela REGION
@@ -214,13 +219,14 @@ with open('processing/poverty_inequality/entities_csv/Region.csv', 'r') as f:
 conn.commit()
 print("Tabela Region populada com sucesso!")
 
-# Passo 2: Carregar dados na tabela COUNTRY (usando tabela temporária)
+
+# Passo 2: Carregar dados na tabela COUNTRY
 cursor.execute("CREATE TEMP TABLE temp_country (region_code VARCHAR, country_name VARCHAR, country_code VARCHAR);")
 with open('processing/poverty_inequality/entities_csv/Country.csv', 'r') as f:
     cursor.copy_expert("COPY temp_country FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
-    INSERT INTO COUNTRY (country_code, country_name, id_region)
-    SELECT t.country_code, t.country_name, r.id_region
+    INSERT INTO COUNTRY (id_region, country_name, country_code)
+    SELECT r.id_region, t.country_name, t.country_code
     FROM temp_country t
     JOIN REGION r ON t.region_code = r.region_code;
 """)
@@ -228,7 +234,8 @@ cursor.execute("DROP TABLE temp_country;")
 conn.commit()
 print("Tabela Country populada com sucesso!")
 
-# Passo 3: Carregar dados na tabela SURVEY (usando tabela temporária)
+
+# Passo 3: Carregar dados na tabela SURVEY
 cursor.execute("""
     CREATE TEMP TABLE temp_survey (
         country_code VARCHAR, welfare_type VARCHAR, survey_acronym VARCHAR, survey_comparability INTEGER,
@@ -276,24 +283,26 @@ cursor.execute("DROP TABLE temp_decile;")
 conn.commit()
 print("Tabela Decile populada com sucesso!")
 
+
 # Passo 5: Carregar dados na tabela DEMOGRAPHY
 cursor.execute("""
     CREATE TEMP TABLE temp_demography (
-        year INTEGER, country_code VARCHAR, pop_density DOUBLE PRECISION, urban_pop DOUBLE PRECISION,
-        rural_pop DOUBLE PRECISION, net_migration DOUBLE PRECISION, death_rate DOUBLE PRECISION, birth_rate DOUBLE PRECISION
+        year INTEGER, country_code VARCHAR, pop_density DOUBLE PRECISION, net_migration DOUBLE PRECISION, birth_rate DOUBLE PRECISION, 
+        death_rate DOUBLE PRECISION, rural_pop DOUBLE PRECISION, urban_pop DOUBLE PRECISION
     );
 """)
 with open('processing/global_indicators/entities_csv/Demography.csv', 'r') as f:
     cursor.copy_expert("COPY temp_demography FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
-    INSERT INTO DEMOGRAPHY (year, id_country, pop_density, urban_pop, rural_pop, net_migration, death_rate, birth_rate)
-    SELECT t.year, c.id_country, t.pop_density, t.urban_pop, t.rural_pop, t.net_migration, t.death_rate, t.birth_rate
+    INSERT INTO DEMOGRAPHY (year, id_country, pop_density, net_migration, birth_rate, death_rate, rural_pop, urban_pop)
+    SELECT t.year, c.id_country, t.pop_density, t.net_migration, t.birth_rate, t.death_rate, t.rural_pop, t.urban_pop
     FROM temp_demography t
     JOIN COUNTRY c ON t.country_code = c.country_code;
 """)
 cursor.execute("DROP TABLE temp_demography;")
 conn.commit()
 print("Tabela Demography populada com sucesso!")
+
 
 # Passo 6: Carregar dados na tabela ECONOMY
 cursor.execute("CREATE TEMP TABLE temp_economy (year INTEGER, country_code VARCHAR, tax_revenue DOUBLE PRECISION, inflation DOUBLE PRECISION, gdp DOUBLE PRECISION);")
@@ -309,18 +318,20 @@ cursor.execute("DROP TABLE temp_economy;")
 conn.commit()
 print("Tabela Economy populada com sucesso!")
 
+
 # Passo 7: Carregar dados na tabela EMPLOYMENT
 cursor.execute("""
     CREATE TEMP TABLE temp_employment (
-        year INTEGER, country_code VARCHAR, child_emp DOUBLE PRECISION, unemp DOUBLE PRECISION, vulnerable_emp DOUBLE PRECISION,
-        part_time DOUBLE PRECISION, employers DOUBLE PRECISION, labor_force_total DOUBLE PRECISION, labor_force_fem DOUBLE PRECISION
+        year INTEGER, country_code VARCHAR, employers DOUBLE PRECISION, vulnerable_emp DOUBLE PRECISION,
+        child_emp DOUBLE PRECISION, part_time DOUBLE PRECISION, labor_force_fem DOUBLE PRECISION,
+        labor_force_total DOUBLE PRECISION, unemp DOUBLE PRECISION
     );
 """)
 with open('processing/global_indicators/entities_csv/Employment.csv', 'r') as f:
     cursor.copy_expert("COPY temp_employment FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
-    INSERT INTO EMPLOYMENT (year, id_country, child_emp, unemp, vulnerable_emp, part_time, employers, labor_force_total, labor_force_fem)
-    SELECT t.year, c.id_country, t.child_emp, t.unemp, t.vulnerable_emp, t.part_time, t.employers, t.labor_force_total, t.labor_force_fem
+    INSERT INTO EMPLOYMENT (year, id_country, employers, vulnerable_emp, child_emp, part_time, labor_force_fem, labor_force_total, unemp)
+    SELECT t.year, c.id_country, t.employers, t.vulnerable_emp, t.child_emp, t.part_time, t.labor_force_fem, t.labor_force_total, t.unemp
     FROM temp_employment t
     JOIN COUNTRY c ON t.country_code = c.country_code;
 """)
@@ -328,24 +339,27 @@ cursor.execute("DROP TABLE temp_employment;")
 conn.commit()
 print("Tabela Employment populada com sucesso!")
 
+
 # Passo 8: Carregar dados na tabela EDUCATION
 cursor.execute("""
-    CREATE TEMP TABLE temp_education (
-        year INTEGER, country_code VARCHAR, child_out_of_school DOUBLE PRECISION, progression_to_sec DOUBLE PRECISION,
-        expenditure DOUBLE PRECISION, preprim_enroll DOUBLE PRECISION, prim_enrol DOUBLE PRECISION, sec_enrol DOUBLE PRECISION, terti_enrol DOUBLE PRECISION
+    CREATE TEMP TABLE temp_education (              
+        year INTEGER, country_code VARCHAR, preprim_enrol DOUBLE PRECISION, prim_enrol DOUBLE PRECISION,
+        child_out_of_school DOUBLE PRECISION, sec_enrol DOUBLE PRECISION, progression_to_sec DOUBLE PRECISION,
+        terti_enrol DOUBLE PRECISION, expenditure DOUBLE PRECISION
     );
 """)
 with open('processing/global_indicators/entities_csv/Education.csv', 'r') as f:
     cursor.copy_expert("COPY temp_education FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER ',');", f)
 cursor.execute("""
-    INSERT INTO EDUCATION (year, id_country, child_out_of_school, progression_to_sec, expenditure, preprim_enroll, prim_enrol, sec_enrol, terti_enrol)
-    SELECT t.year, c.id_country, t.child_out_of_school, t.progression_to_sec, t.expenditure, t.preprim_enroll, t.prim_enrol, t.sec_enrol, t.terti_enrol
+    INSERT INTO EDUCATION (year, id_country, preprim_enrol, prim_enrol, child_out_of_school, sec_enrol, progression_to_sec, terti_enrol, expenditure)
+    SELECT t.year, c.id_country, t.preprim_enrol, t.prim_enrol, t.child_out_of_school, t.sec_enrol, t.progression_to_sec, t.terti_enrol, t.expenditure
     FROM temp_education t
     JOIN COUNTRY c ON t.country_code = c.country_code;
 """)
 cursor.execute("DROP TABLE temp_education;")
 conn.commit()
 print("Tabela Education populada com sucesso!")
+
 
 # Passo 9: Carregar dados na tabela HEALTH
 cursor.execute("CREATE TEMP TABLE temp_health (year INTEGER, country_code VARCHAR, hospital_beds DOUBLE PRECISION, physicians DOUBLE PRECISION, expenditure DOUBLE PRECISION);")
@@ -361,6 +375,7 @@ cursor.execute("DROP TABLE temp_health;")
 conn.commit()
 print("Tabela Health populada com sucesso!")
 
+
 # Passo 10: Carregar dados na tabela POPULATION (lógica original ainda é válida)
 cursor.execute("CREATE TEMP TABLE temp_population (year INTEGER, country_code VARCHAR, pop_ages VARCHAR, gender VARCHAR, number DOUBLE PRECISION);")
 with open("processing/global_indicators/entities_csv/Population.csv", 'r') as f:
@@ -375,6 +390,7 @@ cursor.execute("""
 cursor.execute("DROP TABLE temp_population;")
 conn.commit()
 print("Tabela Population populada com sucesso!")
+
 
 # Passo 11: Carregar dados na tabela LIFE_EXPECTANCY (lógica original ainda é válida)
 cursor.execute("CREATE TEMP TABLE temp_life_expectancy (year INTEGER, country_code VARCHAR, gender VARCHAR, value DOUBLE PRECISION);")
