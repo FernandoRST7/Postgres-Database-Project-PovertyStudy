@@ -24,7 +24,7 @@ Os dados e consultas abordam temas conectados aos seguintes ODS:
 - Desenvolvemos o diagrama entidade-relacionamento (DER) representando as principais entidades (como País, Indicador, Pobreza, Educação, Saúde, etc.) e seus relacionamentos.
 - Para isso filtramos os datasets escolhidos pelo código identificador dos indicadores, separando cada um deles em entidades. Além disso atribuimos nomes melhores para cada indicador, a fim de facilitar a consulta SQL.
 - Abaixo temos os indicadores escolhidos de cada dataset separado em suas entidades. Vale lembrar que a tabela abaixo tem apenas a parte dos indicadores, sendo que cada informação dessa possui seu país/região e ano de origem da pesquisa.
-- Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para separar dados em tabelas menores para reduzir redundância e dependências indesejadas. Portanto, nossa estruturação utiliza a 1FN (Primeira Forma Normal) e 3FN (Terceira Forma Normal)
+- Foi feita normalização nas entidades _Population_ e _Life Expectancy_, para separar dados em tabelas menores para reduzir redundância e dependências indesejadas. Portanto, nossa estruturação utiliza a 3FN (Terceira Forma Normal) e consequentemente a 1FN e 2FN.
 
 #### [Global Indicators](https://github.com/FernandoRST7/Postgres-Database-Project-PovertyStudy/blob/main/processing/global_indicators/Global_Indicators_filtered.csv)
 
@@ -127,7 +127,7 @@ Para popular o banco de dados, criamos várias tabelas, uma para cada entidade d
 
 Elaboramos as seguintes consultas SQL avançadas, que integram dados de várias tabelas, utilizam agrupamentos, ordenações, operações de junção e funções analíticas para explorar correlações significativas entre os dados:
 
-#### 1. Análise de Desemprego, Desigualdade e Educação por País
+#### 1. Análise de Desemprego, Desigualdade e Educação por País [[RESULTADO]](python-SQL/Results/SQL%201.csv)
 Consulta que relaciona as médias de taxa de desemprego, o coeficiente de Gini e a taxa de matrícula no ensino secundário para avaliar como a educação pode influenciar a desigualdade e o desemprego em diferentes países.
 ```sql
 SELECT 
@@ -140,6 +140,7 @@ SELECT
         WHEN AVG(ed.sec_enrol) BETWEEN 50 AND 80 THEN 'Moderate Enrollment'
         ELSE 'Low Enrollment'
     END AS enrollment_category
+
 FROM 
     employment e
 JOIN 
@@ -148,18 +149,21 @@ JOIN
     survey s ON c.country_code = s.country_code
 JOIN 
     education ed ON c.country_code = ed.country_code AND e.year = ed.year
+
 WHERE 
     e.year = s.survey_year
     AND ed.sec_enrol IS NOT NULL
     AND s.gini IS NOT NULL
+
 GROUP BY 
     c.country_name
+
 ORDER BY 
     c.country_name;
 ```
 
-#### 2. Expectativa de Vida, Despesas com Saúde e Taxa de Mortalidade
-Consulta que analisa a relação entre as médias de expectativa de vida, os gastos com saúde como percentual do PIB e a taxa de mortalidade, destacando países com altos gastos em saúde, mas baixa expectativa de vida.
+#### 2. Expectativa de Vida, Despesas com Saúde e Taxa de Mortalidade [[RESULTADO]](python-SQL/Results/SQL%202.csv)
+Consulta que relaciona a expectativa média de vida, os gastos médios com saúde e a taxa média de mortalidade, destacando países por gênero e agrupando-os em quartis de investimento em saúde, para identificar padrões entre investimento, longevidade e mortalidade.
 ```sql
 SELECT 
     c.country_name,
@@ -169,22 +173,26 @@ SELECT
     ROUND(AVG(dm.death_rate)::numeric, 2) AS avg_crude_death_rate,
     NTILE(4) OVER (PARTITION BY le.gender ORDER BY AVG(h.expenditure) DESC) AS health_expenditure_quartile,
     ROUND((AVG(le.value) / NULLIF(AVG(h.expenditure), 0))::numeric, 2) AS avg_life_expectancy_per_expenditure
+
 FROM 
     life_expectancy le
 JOIN 
     demography dm ON le.id_demography = dm.id_demography
 JOIN 
-    country c ON dm.country_code = c.country_code
+    country c ON dm.id_country = c.id_country
 JOIN 
-    health h ON c.country_code = h.country_code AND dm.year = h.year
+    health h ON c.id_country = h.id_country AND dm.year = h.year
+
 WHERE 
     le.value IS NOT NULL
     AND h.expenditure IS NOT NULL
     AND dm.death_rate IS NOT NULL
     AND h.expenditure > 0
+
 GROUP BY 
     c.country_name,
     le.gender
+
 ORDER BY 
     c.country_name,
     le.gender,
@@ -193,8 +201,8 @@ ORDER BY
     avg_crude_death_rate ASC;
 ```
 
-#### 3. População Urbana, PIB e Taxa de Migração
-Consulta que verifica a relação entre população urbana, o PIB e a taxa de migração líquida, destacando países com alta urbanização e crescimento econômico.
+#### 3. População Urbana, PIB e Taxa de Migração [[RESULTADO]](python-SQL/Results/SQL%203.csv)
+Consulta que mostra, para cada país, o dado mais recente disponível sobre população urbana, PIB e taxa de migração líquida, destacando a taxa de urbanização e a tendência migratória (entrada, saída ou estabilidade populacional).
 ```sql
 SELECT 
     c.country_name,
@@ -207,22 +215,25 @@ SELECT
         WHEN d.net_migration < 0 THEN 'Net Outflux'
         ELSE 'Stable Migration'
     END AS migration_trend
+
 FROM 
     demography d
 JOIN 
-    country c ON d.country_code = c.country_code
+    country c ON d.id_country = c.id_country
 JOIN 
-    economy e ON c.country_code = e.country_code AND d.year = e.year
+    economy e ON c.id_country = e.id_country AND d.year = e.year
+
 WHERE 
     d.urban_pop IS NOT NULL
     AND d.rural_pop IS NOT NULL
     AND e.gdp IS NOT NULL
+
 ORDER BY 
     urbanization_rate DESC, gross_domestic_product DESC;
 ```
 
-#### 4. Impacto da Educação e Saúde na Redução da Pobreza
-Consulta que relaciona as médias de taxa de matrícula no ensino primário, os gastos com saúde e a porcentagem da população abaixo da linha de pobreza para avaliar o impacto combinado da educação e saúde na redução da pobreza.
+#### 4. Impacto da Educação e Saúde na Redução da Pobreza [[RESULTADO]](python-SQL/Results/SQL%204.csv)
+Consulta que avalia como a taxa média de matrícula no ensino primário e os gastos médios com saúde se relacionam com a taxa média de pobreza, criando um índice combinado de educação e saúde para analisar seu impacto na redução da pobreza.
 ```sql
 SELECT 
     c.country_name,
@@ -231,60 +242,70 @@ SELECT
     ROUND(AVG(s.headcount)::numeric, 10) AS avg_poverty_rate,
     ROUND((AVG(ed.prim_enrol) * AVG(h.expenditure))::numeric, 10) AS education_health_index,
     CASE 
-        WHEN AVG(s.headcount) < 10 THEN 'Low Poverty'
-        WHEN AVG(s.headcount) BETWEEN 10 AND 30 THEN 'Moderate Poverty'
+        WHEN AVG(s.headcount) * 100 < 10 THEN 'Low Poverty'
+        WHEN AVG(s.headcount) * 100 BETWEEN 10 AND 30 THEN 'Moderate Poverty'
         ELSE 'High Poverty'
     END AS poverty_category
+
 FROM 
     education ed
 JOIN 
-    country c ON ed.country_code = c.country_code
+    country c ON ed.id_country = c.id_country
 JOIN 
-    health h ON c.country_code = h.country_code AND ed.year = h.year
+    health h ON c.id_country = h.id_country AND ed.year = h.year
 JOIN 
-    survey s ON c.country_code = s.country_code AND ed.year = s.survey_year
+    survey s ON c.id_country = s.id_country AND ed.year = s.survey_year
+
 WHERE 
     ed.prim_enrol IS NOT NULL
     AND h.expenditure IS NOT NULL
     AND s.headcount IS NOT NULL
+
 GROUP BY 
     c.country_name
+
 ORDER BY 
     education_health_index DESC, avg_poverty_rate ASC;
 ```
 
-#### 5. Desigualdade, Taxa de Pobreza e Distribuição de Renda
-Consulta que analisa a relação entre o coeficiente de Gini, a taxa de pobreza e a distribuição de renda por decil, destacando países com alta desigualdade e pobreza.
+#### 5. Desigualdade, Taxa de Pobreza e Distribuição de Renda [[RESULTADO]](python-SQL/Results/SQL%205.csv)
+Consulta que, para a pesquisa mais recente de cada país, apresenta o coeficiente de Gini, a taxa de pobreza e a diferença entre a participação dos 10% mais ricos e dos 10% mais pobres na renda,classificando os países conforme o grau de desigualdade na distribuição de renda.
 ```sql
 SELECT 
     c.country_name,
-    ROUND(s.gini::numeric, 5) AS gini_coefficient,
-    ROUND(s.headcount::numeric, 5) AS poverty_rate,
-    d.name AS income_decile,
-    ROUND(d.value::numeric, 5) AS income_share,
-    ROUND(SUM(d.value) OVER (PARTITION BY c.country_name ORDER BY d.name)::numeric, 5) AS cumulative_income_share,
-    CASE 
-        WHEN s.gini > 0.4 THEN 'High Inequality'
-        ELSE 'Low Inequality'
-    END AS inequality_category
+    s.survey_year,
+    ROUND(s.gini::numeric, 3) AS gini_coefficient,
+    ROUND((s.headcount * 100)::numeric, 2) AS poverty_rate_percent,
+    d1.value AS decile_1_income_share,
+    d10.value AS decile_10_income_share,
+    CASE
+		WHEN d1.value IS NULL OR d10.value IS NULL THEN NULL
+		WHEN (d10.value - d1.value) < 0.18 THEN 'Low Decile Gap'
+        WHEN (d10.value - d1.value) < 0.25 THEN 'Moderate Decile Gap'
+        WHEN (d10.value - d1.value) < 0.35 THEN 'High Decile Gap'
+        ELSE 'Very High Decile Gap'
+    END AS decile_inequality_category
+
 FROM 
-    survey s
-JOIN 
-    country c ON s.country_code = c.country_code
-JOIN 
-    decile d ON s.id_survey = d.id_survey
-WHERE 
-    s.gini IS NOT NULL
-    AND s.headcount IS NOT NULL
+    country c
+
+JOIN (
+    SELECT DISTINCT ON (id_country) *
+    FROM survey
+    ORDER BY id_country, survey_year DESC
+) s ON c.id_country = s.id_country
+LEFT JOIN decile d1 ON s.id_survey = d1.id_survey AND (d1.name = 'decile1')
+LEFT JOIN decile d10 ON s.id_survey = d10.id_survey AND (d10.name = 'decile10')
+
 ORDER BY 
-    gini_coefficient DESC, poverty_rate DESC, cumulative_income_share ASC;
+    gini_coefficient DESC, poverty_rate_percent DESC;
 ```
 
 Essas consultas foram projetadas para explorar correlações complexas entre os dados e fornecer insights detalhados alinhados aos Objetivos de Desenvolvimento Sustentável (ODS).
 
 ### 6. Implementação em Python
 
-Todos os filtros foram feitos em python, assim como os sripts para popular o banco de dados e realizar as consultas SQL, para ficar melhor a visualização, colocamos tudo no aquivo `.ipynb`.
+Todos os filtros foram feitos em python, assim como os sripts para popular o banco de dados e realizar as consultas SQL. Cada scypt em sua respectiva pasta no repositório.
 
 ## Autores
 
