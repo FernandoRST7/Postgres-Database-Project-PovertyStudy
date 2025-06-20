@@ -3,85 +3,54 @@
 BEGIN;
 
 
-CREATE TABLE IF NOT EXISTS public."Country"
+CREATE TABLE IF NOT EXISTS public.country
 (
-    country_code character varying NOT NULL,
-    country_name character varying,
-    region_code character varying NOT NULL,
-    PRIMARY KEY (country_code)
+    id_country serial NOT NULL,
+    country_code character varying COLLATE pg_catalog."default" NOT NULL,
+    country_name character varying COLLATE pg_catalog."default",
+    id_region integer COLLATE pg_catalog."default" NOT NULL,
+    PRIMARY KEY (id_country)
 );
 
-CREATE TABLE IF NOT EXISTS public."Survey"
-(
-    id_survey serial NOT NULL,
-    country_code character varying NOT NULL,
-    welfare_type character varying,
-    survey_acronym character varying,
-    survey_comparability integer,
-    comparable_spell character varying,
-    poverty_line double precision,
-    headcount double precision,
-    poverty_gap double precision,
-    poverty_severity double precision,
-    gini double precision,
-    reporting_pop integer,
-    reporting_pce double precision,
-    distribution_type character varying,
-    spl double precision,
-    survey_year integer,
-    PRIMARY KEY (id_survey)
-);
-
-CREATE TABLE IF NOT EXISTS public."Region"
-(
-    region_code character varying NOT NULL,
-    region_name character varying NOT NULL,
-    PRIMARY KEY (region_code)
-);
-
-CREATE TABLE IF NOT EXISTS public."Decile"
+CREATE TABLE IF NOT EXISTS public.decile
 (
     id_decile serial NOT NULL,
     value double precision,
-    name character varying,
+    name character varying COLLATE pg_catalog."default",
     id_survey integer NOT NULL,
-    PRIMARY KEY (id_decile)
+    CONSTRAINT decile_pkey PRIMARY KEY (id_decile)
 );
 
-CREATE TABLE IF NOT EXISTS public."Demography"
+CREATE TABLE IF NOT EXISTS public.demography
 (
     id_demography serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
     pop_density double precision,
     urban_pop double precision,
     rural_pop double precision,
     net_migration double precision,
     death_rate double precision,
     birth_rate double precision,
-    PRIMARY KEY (id_demography)
+    CONSTRAINT demography_pkey PRIMARY KEY (id_demography)
 );
 
-CREATE TABLE IF NOT EXISTS public."Employment"
+CREATE TABLE IF NOT EXISTS public.economy
 (
-    id_employment serial NOT NULL,
+    id_economy serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
-    child_emp double precision,
-    unemp double precision,
-    vulnerable_emp double precision,
-    part_time double precision,
-    employers double precision,
-    labor_force_total double precision,
-    labor_force_fem double precision,
-    PRIMARY KEY (id_employment)
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
+    gdp double precision,
+    inflation double precision,
+    tax_revenue double precision,
+    CONSTRAINT economy_pkey PRIMARY KEY (id_economy)
 );
 
-CREATE TABLE IF NOT EXISTS public."Education"
+CREATE TABLE IF NOT EXISTS public.education
 (
     id_education serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
     child_out_of_school double precision,
     progression_to_sec double precision,
     expenditure double precision,
@@ -89,125 +58,160 @@ CREATE TABLE IF NOT EXISTS public."Education"
     prim_enrol double precision,
     sec_enrol double precision,
     terti_enrol double precision,
-    PRIMARY KEY (id_education)
+    CONSTRAINT education_pkey PRIMARY KEY (id_education)
 );
 
-CREATE TABLE IF NOT EXISTS public."Economy"
+CREATE TABLE IF NOT EXISTS public.employment
 (
-    id_economy serial NOT NULL,
+    id_employment serial NOT NULL,
     year integer,
-    country_code character varying NOT NULL,
-    gdp double precision,
-    inflation double precision,
-    tax_revenue double precision,
-    PRIMARY KEY (id_economy)
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
+    child_emp double precision,
+    unemp double precision,
+    vulnerable_emp double precision,
+    part_time double precision,
+    employers double precision,
+    labor_force_total double precision,
+    labor_force_fem double precision,
+    CONSTRAINT employment_pkey PRIMARY KEY (id_employment)
 );
 
-CREATE TABLE IF NOT EXISTS public."Population"
-(
-    id_population serial NOT NULL,
-    id_demography integer NOT NULL,
-    pop_ages character varying,
-    gender character varying,
-    "number" double precision,
-    PRIMARY KEY (id_population)
-);
-
-CREATE TABLE IF NOT EXISTS public."Life Expectancy"
-(
-    id_life_expectancy serial NOT NULL,
-    id_demography integer NOT NULL,
-    gender character varying,
-    value double precision,
-    PRIMARY KEY (id_life_expectancy)
-);
-
-CREATE TABLE IF NOT EXISTS public."Health"
+CREATE TABLE IF NOT EXISTS public.health
 (
     id_health serial NOT NULL,
-    country_code character varying NOT NULL,
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
     year integer,
     hospital_beds double precision,
     physicians double precision,
     expenditure double precision,
-    PRIMARY KEY (id_health)
+    CONSTRAINT health_pkey PRIMARY KEY (id_health)
 );
 
-ALTER TABLE IF EXISTS public."Country"
-    ADD FOREIGN KEY (region_code)
-    REFERENCES public."Region" (region_code) MATCH SIMPLE
+CREATE TABLE IF NOT EXISTS public.life_expectancy
+(
+    id_life_expectancy serial NOT NULL,
+    id_demography integer NOT NULL,
+    gender character varying COLLATE pg_catalog."default",
+    value double precision,
+    CONSTRAINT life_expectancy_pkey PRIMARY KEY (id_life_expectancy)
+);
+
+CREATE TABLE IF NOT EXISTS public.population
+(
+    id_population serial NOT NULL,
+    id_demography integer NOT NULL,
+    pop_ages character varying COLLATE pg_catalog."default",
+    gender character varying COLLATE pg_catalog."default",
+    "number" double precision,
+    CONSTRAINT population_pkey PRIMARY KEY (id_population)
+);
+
+CREATE TABLE IF NOT EXISTS public.region
+(
+    id_region serial NOT NULL,
+    region_code character varying COLLATE pg_catalog."default" NOT NULL,
+    region_name character varying COLLATE pg_catalog."default" NOT NULL,
+    PRIMARY KEY (id_region)
+);
+
+CREATE TABLE IF NOT EXISTS public.survey
+(
+    id_survey serial NOT NULL,
+    id_country integer COLLATE pg_catalog."default" NOT NULL,
+    welfare_type character varying COLLATE pg_catalog."default",
+    survey_acronym character varying COLLATE pg_catalog."default",
+    survey_comparability integer,
+    comparable_spell character varying COLLATE pg_catalog."default",
+    poverty_line double precision,
+    headcount double precision,
+    poverty_gap double precision,
+    poverty_severity double precision,
+    gini double precision,
+    reporting_pop integer,
+    reporting_pce double precision,
+    distribution_type character varying COLLATE pg_catalog."default",
+    spl double precision,
+    survey_year integer,
+    survey_coverage character varying COLLATE pg_catalog."default",
+    reporting_level character varying COLLATE pg_catalog."default",
+    CONSTRAINT survey_pkey PRIMARY KEY (id_survey)
+);
+
+ALTER TABLE IF EXISTS public.country
+    ADD FOREIGN KEY (id_region)
+    REFERENCES public.region (id_region) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Survey"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public."Decile"
+ALTER TABLE IF EXISTS public.decile
     ADD FOREIGN KEY (id_survey)
-    REFERENCES public."Survey" (id_survey) MATCH SIMPLE
+    REFERENCES public.survey (id_survey) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Demography"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+ALTER TABLE IF EXISTS public.demography
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Employment"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+ALTER TABLE IF EXISTS public.economy
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Education"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+ALTER TABLE IF EXISTS public.education
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Economy"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+ALTER TABLE IF EXISTS public.employment
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Population"
+ALTER TABLE IF EXISTS public.health
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public.life_expectancy
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Life Expectancy"
+ALTER TABLE IF EXISTS public.population
     ADD FOREIGN KEY (id_demography)
-    REFERENCES public."Demography" (id_demography) MATCH SIMPLE
+    REFERENCES public.demography (id_demography) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
 
 
-ALTER TABLE IF EXISTS public."Health"
-    ADD FOREIGN KEY (country_code)
-    REFERENCES public."Country" (country_code) MATCH SIMPLE
+ALTER TABLE IF EXISTS public.survey
+    ADD FOREIGN KEY (id_country)
+    REFERENCES public.country (id_country) MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;
