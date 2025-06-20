@@ -5,7 +5,7 @@ import pandas as pd
 conn = psycopg2.connect(
     dbname='postgres',
     user='postgres',
-    password='1001',
+    password=,  # Senha do usuário postgres
     host='localhost',
     port='5432'
 )
