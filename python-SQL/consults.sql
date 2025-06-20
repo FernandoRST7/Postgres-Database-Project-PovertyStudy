@@ -1,7 +1,6 @@
 --1. Análise de Desemprego, Desigualdade e Educação por País
---Consulta que relaciona a taxa de desemprego, o coeficiente de Gini 
---e a taxa de matrícula no ensino secundário para avaliar como a educação 
---pode influenciar a desigualdade e o desemprego em diferentes países.
+--Consulta que relaciona a taxa de desemprego, o coeficiente de Gini e a taxa de matrícula no ensino
+--secundário para avaliar como a educação pode influenciar a desigualdade e o desemprego em diferentes países.
 SELECT 
     c.country_name,
     ROUND(AVG(e.unemp)::numeric, 2) AS avg_unemployment_rate,
@@ -15,11 +14,11 @@ SELECT
 FROM 
     employment e
 JOIN 
-    country c ON e.id_country = c.id_country -- ATUALIZADO
+    country c ON e.id_country = c.id_country
 JOIN 
-    survey s ON c.id_country = s.id_country -- ATUALIZADO
+    survey s ON c.id_country = s.id_country
 JOIN 
-    education ed ON c.id_country = ed.id_country AND e.year = ed.year -- ATUALIZADO
+    education ed ON c.id_country = ed.id_country AND e.year = ed.year
 WHERE 
     e.year = s.survey_year
     AND ed.sec_enrol IS NOT NULL
@@ -29,10 +28,10 @@ GROUP BY
 ORDER BY 
     c.country_name;
 
--- 2. Expectativa de Vida, Despesas com Saúde e Taxa de Mortalidade
--- Consulta que analisa a relação entre a expectativa de vida, os gastos 
--- com saúde como percentual do PIB e a taxa de mortalidade, destacando países 
--- com altos gastos em saúde, mas baixa expectativa de vida.
+--2. Expectativa de Vida, Gastos com Saúde e Taxa de Mortalidade
+--Consulta que relaciona a expectativa média de vida, os gastos médios com saúde e a taxa média de mortalidade,
+--destacando países por gênero e agrupando-os em quartis de investimento em saúde, para identificar padrões entre
+--investimento, longevidade e mortalidade.
 SELECT 
     c.country_name,
     le.gender,
@@ -46,9 +45,9 @@ FROM
 JOIN 
     demography dm ON le.id_demography = dm.id_demography
 JOIN 
-    country c ON dm.id_country = c.id_country -- ATUALIZADO
+    country c ON dm.id_country = c.id_country
 JOIN 
-    health h ON c.id_country = h.id_country AND dm.year = h.year -- ATUALIZADO
+    health h ON c.id_country = h.id_country AND dm.year = h.year
 WHERE 
     le.value IS NOT NULL
     AND h.expenditure IS NOT NULL
@@ -64,9 +63,10 @@ ORDER BY
     avg_life_expectancy_per_expenditure DESC, 
     avg_crude_death_rate ASC;
 
--- 3. População Urbana, PIB e Taxa de Migração
--- Consulta que verifica a relação entre a população urbana, 
--- o PIB e a taxa de migração líquida, destacando países com alta urbanização e crescimento econômico.
+
+--3. População Urbana, PIB e Migração Líquida
+--Consulta que mostra, para cada país, o dado mais recente disponível sobre população urbana, PIB e taxa de migração
+--líquida, destacando a taxa de urbanização e a tendência migratória (entrada, saída ou estabilidade populacional).
 SELECT 
     c.country_name,
     d.urban_pop AS urban_population,
@@ -81,9 +81,9 @@ SELECT
 FROM 
     demography d
 JOIN 
-    country c ON d.id_country = c.id_country -- ATUALIZADO
+    country c ON d.id_country = c.id_country
 JOIN 
-    economy e ON c.id_country = e.id_country AND d.year = e.year -- ATUALIZADO
+    economy e ON c.id_country = e.id_country AND d.year = e.year
 WHERE 
     d.urban_pop IS NOT NULL
     AND d.rural_pop IS NOT NULL
@@ -91,10 +91,10 @@ WHERE
 ORDER BY 
     urbanization_rate DESC, gross_domestic_product DESC;
 
---4. Impacto da Educação e Saúde na Redução da Pobreza
---Consulta que relaciona a taxa de matrícula no ensino primário, 
---os gastos com saúde e a porcentagem da população abaixo da linha de pobreza 
---para avaliar o impacto combinado da educação e saúde na redução da pobreza.
+
+--4. Impacto da Educação e Saúde na Pobreza
+--Consulta que avalia como a taxa média de matrícula no ensino primário e os gastos médios com saúde se relacionam com a
+--taxa média de pobreza, criando um índice combinado de educação e saúde para analisar seu impacto na redução da pobreza.
 SELECT 
     c.country_name,
     ROUND(AVG(ed.prim_enrol)::numeric, 10) AS avg_primary_enrollment_rate,
@@ -102,18 +102,18 @@ SELECT
     ROUND(AVG(s.headcount)::numeric, 10) AS avg_poverty_rate,
     ROUND((AVG(ed.prim_enrol) * AVG(h.expenditure))::numeric, 10) AS education_health_index,
     CASE 
-        WHEN AVG(s.headcount) < 10 THEN 'Low Poverty'
-        WHEN AVG(s.headcount) BETWEEN 10 AND 30 THEN 'Moderate Poverty'
+        WHEN AVG(s.headcount) * 100 < 10 THEN 'Low Poverty'
+        WHEN AVG(s.headcount) * 100 BETWEEN 10 AND 30 THEN 'Moderate Poverty'
         ELSE 'High Poverty'
     END AS poverty_category
 FROM 
     education ed
 JOIN 
-    country c ON ed.id_country = c.id_country -- ATUALIZADO
+    country c ON ed.id_country = c.id_country
 JOIN 
-    health h ON c.id_country = h.id_country AND ed.year = h.year -- ATUALIZADO
+    health h ON c.id_country = h.id_country AND ed.year = h.year
 JOIN 
-    survey s ON c.id_country = s.id_country AND ed.year = s.survey_year -- ATUALIZADO
+    survey s ON c.id_country = s.id_country AND ed.year = s.survey_year
 WHERE 
     ed.prim_enrol IS NOT NULL
     AND h.expenditure IS NOT NULL
@@ -123,29 +123,32 @@ GROUP BY
 ORDER BY 
     education_health_index DESC, avg_poverty_rate ASC;
 
---5. Desigualdade, Taxa de Pobreza e Distribuição de Renda
---Consulta que analisa a relação entre o coeficiente de Gini, 
---a taxa de pobreza e a distribuição de renda por decil, 
---destacando países com alta desigualdade e pobreza.
+--5. Desigualdade, Pobreza e Distribuição de Renda por Decil
+--Consulta que, para a pesquisa mais recente de cada país, apresenta o coeficiente de Gini, a taxa de pobreza e 
+--a diferença entre a participação dos 10% mais ricos e dos 10% mais pobres na renda,classificando os países
+--conforme o grau de desigualdade na distribuição de renda.
 SELECT 
     c.country_name,
-    ROUND(s.gini::numeric, 5) AS gini_coefficient,
-    ROUND(s.headcount::numeric, 5) AS poverty_rate,
-    d.name AS income_decile,
-    ROUND(d.value::numeric, 5) AS income_share,
-    ROUND(SUM(d.value) OVER (PARTITION BY c.country_name ORDER BY d.name)::numeric, 5) AS cumulative_income_share,
-    CASE 
-        WHEN s.gini > 0.4 THEN 'High Inequality'
-        ELSE 'Low Inequality'
-    END AS inequality_category
+    s.survey_year,
+    ROUND(s.gini::numeric, 3) AS gini_coefficient,
+    ROUND((s.headcount * 100)::numeric, 2) AS poverty_rate_percent,
+    d1.value AS decile_1_income_share,
+    d10.value AS decile_10_income_share,
+    CASE
+		WHEN d1.value IS NULL OR d10.value IS NULL THEN NULL
+		WHEN (d10.value - d1.value) < 0.18 THEN 'Low Decile Gap'
+        WHEN (d10.value - d1.value) < 0.25 THEN 'Moderate Decile Gap'
+        WHEN (d10.value - d1.value) < 0.35 THEN 'High Decile Gap'
+        ELSE 'Very High Decile Gap'
+    END AS decile_inequality_category
 FROM 
-    survey s
-JOIN 
-    country c ON s.id_country = c.id_country -- ATUALIZADO
-JOIN 
-    decile d ON s.id_survey = d.id_survey
-WHERE 
-    s.gini IS NOT NULL
-    AND s.headcount IS NOT NULL
+    country c
+JOIN (
+    SELECT DISTINCT ON (id_country) *
+    FROM survey
+    ORDER BY id_country, survey_year DESC
+) s ON c.id_country = s.id_country
+LEFT JOIN decile d1 ON s.id_survey = d1.id_survey AND (d1.name = 'decile1')
+LEFT JOIN decile d10 ON s.id_survey = d10.id_survey AND (d10.name = 'decile10')
 ORDER BY 
-    gini_coefficient DESC, poverty_rate DESC, cumulative_income_share ASC;
+    gini_coefficient DESC, poverty_rate_percent DESC;

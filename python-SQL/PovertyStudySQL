@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS public.education
     child_out_of_school double precision,
     progression_to_sec double precision,
     expenditure double precision,
-    preprim_enroll double precision,
+    preprim_enrol double precision,
     prim_enrol double precision,
     sec_enrol double precision,
     terti_enrol double precision,
